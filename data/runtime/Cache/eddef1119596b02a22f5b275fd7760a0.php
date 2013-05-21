@@ -29,6 +29,6 @@ __EXTENDS_JS__
 
 <body>
 
- <a href="<?php echo U('group/index/index');?>">小组</a>
+ <a href="<?php echo U('group/index');?>">小组</a>
 </body>
 </html>
