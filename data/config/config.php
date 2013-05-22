@@ -1,11 +1,10 @@
 <?php
 return array(
 
-	'LOAD_EXT_CONFIG' => 'db,url', //扩展配置
-	'APP_AUTOLOAD_PATH' => 'Iklib,COM',//自动加载项目类库
-    'TMPL_ACTION_SUCCESS' => 'public:success',
+	'LOAD_EXT_CONFIG' => 'db,url', //扩展配置    
+	'TMPL_ACTION_SUCCESS' => 'public:success',
     'TMPL_ACTION_ERROR'   => 'public:error',
-
+	'APP_AUTOLOAD_PATH' => 'classlib.iklib,classlib.com',//自动加载项目类库		
 	'SHOW_PAGE_TRACE' => false,
 	
 	//'SESSION_PREFIX'=>'ik',

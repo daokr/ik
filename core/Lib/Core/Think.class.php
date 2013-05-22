@@ -124,7 +124,7 @@ class Think {
         	// 编译文件
         	if(!APP_DEBUG)  $compile   .= compile(IK_EXTEND_PATH.'function/common.php');
         }
- 
+
         // 加载模式别名定义
         if(isset($mode['alias'])) {
             $alias = is_array($mode['alias'])?$mode['alias']:include $mode['alias'];
@@ -218,14 +218,14 @@ class Think {
                 return ;
             }
         }
-
         // 根据自动加载路径设置进行尝试搜索
-        $paths  =   explode(',',C('APP_AUTOLOAD_PATH')); 
+        $paths  =   explode(',',C('APP_AUTOLOAD_PATH'));
         foreach ($paths as $path){  
             if(import($path.'.'.$class))
                 // 如果加载类成功则返回
                 return ;
         }
+ 		die;
     }
 
     /**

@@ -36,7 +36,7 @@ $_REQUEST	=	array_merge($_GET,$_POST);
 if(isset($_REQUEST['os']) && !isset($_REQUEST['app'])){
 	$ik['_os']  = $_REQUEST['os'];
 }else{
-	$ik['_app'] = isset($_REQUEST['app']) && !empty($_REQUEST['app'])?$_REQUEST['app']:'home';
+	$ik['_app'] = isset($_REQUEST['app']) && !empty($_REQUEST['app'])?$_REQUEST['app']:'public';
 	$ik['_mod'] = isset($_REQUEST['m']) && !empty($_REQUEST['m'])?$_REQUEST['m']:'index';
 	$ik['_act'] = isset($_REQUEST['a']) && !empty($_REQUEST['a'])?$_REQUEST['a']:'index';
 }

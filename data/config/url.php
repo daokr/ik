@@ -5,7 +5,7 @@ return array (
   'URL_ROUTER_ON' => true,
 /*   'URL_ROUTE_RULES' => 
   array (
-    '/^people\/(\w+)$/' => 'people/index?id=:1',
+    '/^people\/(\w+)$/' => 'space/index/index?id=:1',
     '/^group\/topic\/(\d+)$/' => 'group/topic?id=:1',
   	'/^group\/topic\/(\d+)\/sc\/(\w+)$/' => 'group/topic?id=:1&sc=:2',  		
   	'/^group\/topic\/(\d+)\/sc\/(\w+)\/p\/(\d+)$/' => 'group/topic?id=:1&sc=:2&p=:3', 		

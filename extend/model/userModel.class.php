@@ -72,7 +72,7 @@ class userModel extends Model
 		}
 		//在线状态
 		$time = time() - 15 * 60;
-		$isonline = D('user_online')->where(array('userid'=>$userid,'ctime'=>array('gt',$time)))->count();
+		$isonline = M('user_online')->where(array('userid'=>$userid,'ctime'=>array('gt',$time)))->count();
 		$strUser['isonline'] = $isonline > 0 ? 1 : 0 ;
 
 		//签名
@@ -100,7 +100,7 @@ class userModel extends Model
 				'userid' => $userid,
 				'userid_follow' => $userid_follow,
 		);
-		$result = D('user_follow')->where($where)->count('*');
+		$result = M('user_follow')->where($where)->count('*');
 		if($result){
 			return true;
 		}else{
@@ -113,7 +113,7 @@ class userModel extends Model
 				'userid' => $userid,
 				'userid_follow' => $userid_follow,
 		);		
-		$user_follow_mod = D('user_follow'); 
+		$user_follow_mod = M('user_follow'); 
 		if (false !== $user_follow_mod->create ( $data )) {
 			$id = $user_follow_mod->add ();
 			//更新关注数
@@ -128,7 +128,7 @@ class userModel extends Model
 				'userid' => $userid,
 				'userid_follow' => $userid_follow,
 		);
-		D('user_follow')->where($where)->delete();
+		M('user_follow')->where($where)->delete();
 		//更新关注数
 		$this->where(array('userid'=>$userid))->setDec('count_follow'); //关注数
 		$this->where(array('userid'=>$userid_follow))->setDec('count_followed'); //被关注数
@@ -141,7 +141,7 @@ class userModel extends Model
 				'userid' => $userid,
 				'userid_follow' => $userid_follow,
 		);
-		$result = D('user_follow')->where($where)->count('*');
+		$result = M('user_follow')->where($where)->count('*');
 		if($result){
 			return true;
 		}else{
@@ -153,7 +153,7 @@ class userModel extends Model
 		$where = array (
 				'userid' => $userid,
 		);
-		$followUsers = D('user_follow')->where($where)->order('addtime desc')->limit($limit)->select();
+		$followUsers = M('user_follow')->where($where)->order('addtime desc')->limit($limit)->select();
 		if(is_array($followUsers)){
 			foreach($followUsers as $item){
 				$result[] =  $this->getOneUser($item['userid_follow']);
@@ -166,7 +166,7 @@ class userModel extends Model
 		$where = array (
 				'userid_follow' => $userid_follow,
 		);
-		$arrUser = D('user_follow')->where($where)->order('addtime desc')->limit($limit)->select();
+		$arrUser = M('user_follow')->where($where)->order('addtime desc')->limit($limit)->select();
 		if(is_array($arrUser)){
 			foreach($arrUser as $key=>$item){
 				$result[$key] =  $this->getOneUser($item['userid']);

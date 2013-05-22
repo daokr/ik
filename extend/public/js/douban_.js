@@ -822,7 +822,7 @@ Douban.init_discover = function(o){
 var friend_form_update = function(data, uid) {
     $("#divac").html(data);
     $("#submitac").submit(function(){
-        this.action = "/j/people/"+uid+"/friend";
+        this.action = "/j/space/"+uid+"/friend";
         remote_submit_json(this,function(r) {
             $("#divac").parent().html(r['html']);
             $("#tip_wait").yellow_fade();

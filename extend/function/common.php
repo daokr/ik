@@ -199,7 +199,7 @@ function avatar($uid, $size) {
     $avatar_dir = avatar_dir($uid);
     $avatar_file = $avatar_dir . md5($uid) . "_{$size}_{$size}.jpg";
     if (!is_file(C('ik_attach_path') . 'face/' . $avatar_file)) {
-        $avatar_file = "user_{$size}.jpg";
+       return IK_PUBLIC_URL . '/images/user_'.$size.'.jpg';
     }
     return __ROOT__ . '/' . C('ik_attach_path') . 'face/' . $avatar_file.'?v='.time();
 }

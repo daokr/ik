@@ -102,7 +102,7 @@ function parse_name($name, $type=0) {
  */
 function require_cache($filename) {
     static $_importFiles = array();
-    if (!isset($_importFiles[$filename])) {
+    if (!isset($_importFiles[$filename])) { 
         if (file_exists_case($filename)) {
             require $filename;
             $_importFiles[$filename] = true;
@@ -163,16 +163,20 @@ function import($class, $baseUrl = '', $ext='.class.php') {
     $class_strut     = explode('/', $class);
     if (empty($baseUrl)) {
         $libPath    =   defined('BASE_LIB_PATH')?BASE_LIB_PATH:LIB_PATH;
+       
         if ('@' == $class_strut[0] || APP_NAME == $class_strut[0]) {
             //加载当前项目应用类库
-            $baseUrl = dirname($libPath);
+            $baseUrl = dirname($libPath); 
             $class   = substr_replace($class, basename($libPath).'/', 0, strlen($class_strut[0]) + 1);
         }elseif ('think' == strtolower($class_strut[0])){ // think 官方基类库
-            $baseUrl = CORE_PATH;
+            $baseUrl = CORE_PATH; 
             $class   = substr($class,6);
         }elseif (in_array(strtolower($class_strut[0]), array('org', 'com'))) {
             // org 第三方公共类库 com 企业公共类库
             $baseUrl = LIBRARY_PATH;
+        }elseif(in_array(strtolower($class_strut[0]), array('classlib'))){ 
+        	// IKPHP专用扩展类库导入
+        	$baseUrl = IK_EXTEND_PATH;  
         }else { // 加载其他项目应用类库
             $class   = substr_replace($class, '', 0, strlen($class_strut[0]) + 1);
             $baseUrl = APP_PATH . '../' . $class_strut[0] . '/'.basename($libPath).'/';
@@ -180,8 +184,8 @@ function import($class, $baseUrl = '', $ext='.class.php') {
     }
     if (substr($baseUrl, -1) != '/')
         $baseUrl    .= '/';
-    $classfile       = $baseUrl . $class . $ext;
-    if (!class_exists(basename($class),false)) {
+    $classfile       = $baseUrl . $class . $ext;  
+    if (!class_exists(basename($class),false)) { 
         // 如果类不存在 则导入类库文件
         return require_cache($classfile);
     }

@@ -133,7 +133,7 @@ INSERT INTO `ik_setting` (`name`, `data`) VALUES
 ('charset', 'UTF-8'),
 ('integrate_code', 'default'),
 ('integrate_config', ''),
-('avatar_size', '24,32,48,64,100,200'),
+('avatar_size', '24,32,48,64,100,160,200'),
 ('attr_allow_exts', 'jpg,gif,png,jpeg'),
 ('attr_allow_size', '2048'),
 ('attach_path', 'data/upload/'),

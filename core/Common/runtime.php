@@ -58,13 +58,18 @@ define('SITE_DOMAIN'	,	strip_tags($_SERVER['HTTP_HOST']));
 define('SITE_URL'		,	(IS_HTTPS?'https:':'http:').'//'.SITE_DOMAIN.__ROOT__);
 
 //判断项目app是否存在
-if(!is_dir(LIB_PATH) && TRUE_APPNAME!='home'){
+if(!is_dir(LIB_PATH) && TRUE_APPNAME!='public'){
 	header('Location: '.SITE_URL);
 	exit();
 }
 /*  应用配置  */
 //载入应用配置
 define('APP_URL'			, SITE_URL.'/apps/'.TRUE_APPNAME);
+defined('IK_EXTEND_LIB')     or define('IK_EXTEND_LIB',       IK_EXTEND_PATH.'classlib/'); // 项目类库目录
+
+defined('IK_EXTEND_URL')     or define('IK_EXTEND_URL',       SITE_URL.'/extend'); // 项目类库目录
+defined('IK_PUBLIC_URL')     or define('IK_PUBLIC_URL',       IK_EXTEND_URL.'/public'); // 项目公用静态文件目录
+defined('IK_THEME_URL')     or define('IK_THEME_URL',         IK_EXTEND_URL.'/theme'); // 项目公用静态文件目录
 
 // 路径设置 可在入口文件中重新定义 所有路径常量都必须以/ 结尾
 defined('CORE_PATH')    or define('CORE_PATH',      THINK_PATH.'Lib/'); // 系统核心类库目录

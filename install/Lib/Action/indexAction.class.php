@@ -174,7 +174,7 @@ class indexAction extends Action {
         $temp_info = F ( 'temp_data' );
         $this->assign ( 'email', $temp_info['admin_email'] );
         $this->assign ( 'home_url', $temp_info['site_url'] );
-        $this->assign ( 'admin_url', $temp_info['site_url'].'index.php?g=admin' );
+        $this->assign ( 'admin_url', $temp_info['site_url'].'index.php?app=admin' );
         $this->assign ( 'password', $temp_info['admin_password'] );
         $this->display();
 	}

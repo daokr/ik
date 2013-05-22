@@ -1,6 +1,6 @@
 <!--头部开始-->
 <header>
-<if condition="$module_name eq 'index' && empty($visitor)">
+<if condition="$app_name eq 'public' && empty($visitor)">
 <div class="hd-wrap">
             <div class="hd">
                 <div class="logo">
@@ -8,12 +8,12 @@
                 </div>
                 <div class="top-nav-items">
                 <ul>
-                <li><a href="http://www.ikphp.com" class="lnk-home" target="_blank">爱客首页</a></li>
-                <li><a href="{:U('group/index')}" class="lnk-group" target="_blank">爱客小组</a></li>
-                <li><a href="{:U('article/index')}" class="lnk-article" target="_blank">爱客阅读</a></li>
-                <li><a href="{:U('location/index')}" class="lnk-location" target="_blank">爱客同城</a></li>
-                <li><a href="{:U('site/index')}" class="lnk-site" target="_blank">爱客小站</a></li>
-                <li><a href="{:U('mall/index')}" class="lnk-mall" target="_blank">爱客商城</a></li>
+                <li><a href="__SITE_URL__" class="lnk-home" target="_blank">爱客首页</a></li>
+                <li><a href="{:U('group/index/index')}" class="lnk-group" target="_blank">爱客小组</a></li>
+                <li><a href="{:U('article/index/index')}" class="lnk-article" target="_blank">爱客阅读</a></li>
+                <li><a href="{:U('location/index/index')}" class="lnk-location" target="_blank">爱客同城</a></li>
+                <li><a href="{:U('site/index/index')}" class="lnk-site" target="_blank">爱客小站</a></li>
+                <li><a href="{:U('mall/index/index')}" class="lnk-mall" target="_blank">爱客商城</a></li>
                 </ul>
                 </div>
             </div>
@@ -24,14 +24,14 @@
     
     <div class="top_info">
         <if condition="empty($visitor)">
-		<a href="{:U('user/login')}">登录</a> | <a href="{:U('user/register')}">注册</a> | <a href="{:U('oauth/index', array('mod'=>'qq'))}" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="QQ登录" src="__STATIC__/public/images/connect_qq.png"> 登录</a> | <a href="{:U('oauth/index', array('mod'=>'sina'))}" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="新浪微博" src="__STATIC__/public/images/connect_sina_weibo.png"> 登录</a>    
+		<a href="{:U('public/user/login')}">登录</a> | <a href="{:U('public/user/register')}">注册</a> | <a href="{:U('public/oauth/index', array('mod'=>'qq'))}" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="QQ登录" src="__STATIC__/public/images/connect_qq.png"> 登录</a> | <a href="{:U('public/oauth/index', array('mod'=>'sina'))}" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="新浪微博" src="__STATIC__/public/images/connect_sina_weibo.png"> 登录</a>    
         <else/>
-        <a id="newmsg" href="{:U('message/ikmail',array('d'=>'inbox'))}">新消息({$count_new_msg})</a> | 
-        <a href="{:U('people/index', array('id'=>$visitor['doname']))}">
+        <a id="newmsg" href="{:U('public/message/ikmail',array('d'=>'inbox'))}">新消息({$count_new_msg})</a> | 
+        <a href="{:U('space/index/index', array('id'=>$visitor['doname']))}">
         	{$visitor.username}
         </a> | 
-        <a href="{:U('user/setbase')}">设置</a> | 
-        <a href="{:U('user/logout')}">退出</a>
+        <a href="{:U('public/user/setbase')}">设置</a> | 
+        <a href="{:U('public/user/logout')}">退出</a>
         </if>
     </div>
 
@@ -43,15 +43,15 @@
              </li>             
 
              <li>
-             <a href="{:U('group/index')}">小组</a>
+             <a href="{:U('group/index/index')}">小组</a>
              </li>
              
-             <li><a href="{:U('article/index')}">阅读</a></li>  
-             <li><a href="{:U('location/index')}">同城</a></li>
-             <li><a href="{:U('mall/index')}">淘客</a></li>  
-             <li><a href="{:U('site/index')}">小站</a></li>
-             <li><a href="{:U('app/index')}">应用商店</a></li>             
-             <li><a href="{:U('help/download')}" style="color:#fff">IKPHP源码下载</a></li>                                                      
+             <li><a href="{:U('article/index/index')}">阅读</a></li>  
+             <li><a href="{:U('location/index/index')}">同城</a></li>
+             <li><a href="{:U('mall/index/index')}">淘客</a></li>  
+             <li><a href="{:U('site/index/index')}">小站</a></li>
+             <li><a href="{:U('app/index/index')}">应用商店</a></li>             
+             <li><a href="{:U('help/index/download')}" style="color:#fff">IKPHP源码下载</a></li>                                                      
 
         </ul>
     </div>
