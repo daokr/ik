@@ -226,7 +226,7 @@ __EXTENDS_JS__
         
     </div>
     
-	<p class="pl">本页永久链接: <a href="<?php echo U('group/index/show',array(id=>$strGroup[groupid]));?>">http://www.ikphp.com<?php echo U('group/index/show',array(id=>$strGroup[groupid]));?></a></p>
+	<p class="pl">本页永久链接: <a href="http://www.ikphp.com<?php echo U('group/index/show',array(id=>$strGroup[groupid]));?>">http://www.ikphp.com<?php echo U('group/index/show',array(id=>$strGroup[groupid]));?></a></p>
     
     <p class="pl"><span class="feed"><a href="<?php echo U('group/index/rss',array(id=>$strGroup[groupid]));?>">feed: rss 2.0</a></span></p>
     

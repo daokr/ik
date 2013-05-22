@@ -29,7 +29,7 @@ __EXTENDS_JS__
 <body>
 <!--头部开始-->
 <header>
-<?php if($app_name == 'public' && empty($visitor)): ?><div class="hd-wrap">
+<?php if($app_name == 'public' && empty($visitor) && $module_name == 'index'): ?><div class="hd-wrap">
             <div class="hd">
                 <div class="logo">
                     <h1><a href="__SITE_URL__" title="爱客开源">爱客开源</a></h1>
@@ -166,7 +166,7 @@ __EXTENDS_JS__
                                     <a href="<?php echo U('article/index/show',array('id'=>$item[aid]));?>">（更多）</a>
 								</div>
 							</div>
-							<a href="<?php echo U('people/index',array('id'=>$item[user][doname]));?>"><?php echo ($item[user][username]); ?></a> <span class="time">发表于 <?php echo date('Y-m-d H:i',$item[addtime]) ?> 评论 <?php echo ($item[count_comment]); ?> | 浏览 <?php echo ($item[count_view]); ?></span> 
+							<a href="<?php echo U('space/index/index',array('id'=>$item[user][doname]));?>"><?php echo ($item[user][username]); ?></a> <span class="time">发表于 <?php echo date('Y-m-d H:i',$item[addtime]) ?> 评论 <?php echo ($item[count_comment]); ?> | 浏览 <?php echo ($item[count_view]); ?></span> 
 						</li><?php endforeach; endif; ?>
 
 					</ul>
@@ -195,7 +195,8 @@ __EXTENDS_JS__
             · <a href="<?php echo U('help/privacy');?>">隐私申明</a>
         </span>
         <div class="cl"></div>
-        <p>Powered by <a class="softname" href="<?php echo (IKPHP_SITEURL); ?>"><?php echo (IKPHP_SITENAME); ?></a> <?php echo (IKPHP_VERSION); ?>  目前有 <?php echo ($count_online_user); ?> 人在线<br />
+        <p>Powered by <a class="softname" href="<?php echo (IKPHP_SITEURL); ?>"><?php echo (IKPHP_SITENAME); ?></a> <?php echo (IKPHP_VERSION); ?>  
+        <font color="green">ThinkPHP版本<?php echo (THINK_VERSION); ?></font>  目前有 <?php echo ($count_online_user); ?> 人在线<br />
         <span style="font-size:0.83em;">{__RUNTIME__}          </span>
 
         <!--<script src="http://s6.cnzz.com/stat.php?id=5262498&web_id=5262498" language="JavaScript"></script>-->

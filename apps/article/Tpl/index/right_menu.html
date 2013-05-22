@@ -2,11 +2,11 @@
 
     <div class="usercard">
       <div class="pic">
-            <a href="{:U('people/index',array('id'=>$strUser[doname]))}"><img alt="{$strUser[username]}" src="{$strUser[face]}"></a>
+            <a href="{:U('space/index/index',array('id'=>$strUser[doname]))}"><img alt="{$strUser[username]}" src="{$strUser[face]}"></a>
       </div>
       <div class="info">
            <div class="name">
-               <a href="{:U('people/index',array('id'=>$strUser[doname]))}">{$strUser[username]}</a>
+               <a href="{:U('space/index/index',array('id'=>$strUser[doname]))}">{$strUser[username]}</a>
            </div>
                 <if condition="$strUser[area] neq ''">{$strUser[area][areaname]}<else />火星</if>                        
                 <br>

@@ -54,7 +54,7 @@
 <script language="javascript">
 $(function(){
 	$('#addImg').bind('click',function(){
-		var ajaxurl = "{:U('images/add')}";
+		var ajaxurl = "{:U('public/images/add')}";
 		var typeid = '{$strArticle[aid]}';
 		var data = "{'type':'article','typeid':'"+typeid+"'}";		
 		addPhoto(ajaxurl, data);
@@ -63,7 +63,7 @@ $(function(){
 		addLink();
 	})
 	$('#addVideo').bind('click',function(){
-		var ajaxurl = "{:U('videos/add',array('type'=>'article','typeid'=>$strArticle[aid]))}";
+		var ajaxurl = "{:U('public/videos/add',array('type'=>'article','typeid'=>$strArticle[aid]))}";
 		addVideo(ajaxurl);
 	})
 });

@@ -19,8 +19,8 @@
     <a title="{$item[user][username]}" href="{:U('space/index/index',array('id'=>$item[user][doname]))}" class="nbg"><img alt="{$item[user][username]}" src="{$item[user][face]}" width="48" /></a>
     </div>
     <div class="content">
-    <h3><span>[话题] </span>&nbsp;<a  href="{:U('group/topic',array('id'=>$item[topicid]))}">{$item[title]}</a></h3>
-    <div class="info">小组：<a href="{:U('group/show',array('id'=>$item[group][groupid]))}">{$item[group][groupname]}</a> 发表于 <php> echo date('Y-m-d',$item[addtime]);</php> &nbsp; <a href="{:U('group/topic',array('id'=>$item[topicid]))}#comment">{$item[count_comment]} 回复</a></div>
+    <h3><span>[话题] </span>&nbsp;<a  href="{:U('group/index/topic',array('id'=>$item[topicid]))}">{$item[title]}</a></h3>
+    <div class="info">小组：<a href="{:U('group/index/show',array('id'=>$item[group][groupid]))}">{$item[group][groupname]}</a> 发表于 <php> echo date('Y-m-d',$item[addtime]);</php> &nbsp; <a href="{:U('group/index/topic',array('id'=>$item[topicid]))}#comment">{$item[count_comment]} 回复</a></div>
     <p>{$item[content]}</p>
     </div>
     </div>

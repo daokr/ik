@@ -85,7 +85,7 @@ class group_topicsModel extends Model {
 	}
 	// 获取用户回应的话题
 	public function getUserRepliedTopic($userid, $limit){
-		$myTopics = D('group_topics_comments')->field('topicid')->where(array('userid'=>$userid))->group('topicid')->order('addtime desc')->limit($limit)->select();		
+		$myTopics = M('group_topics_comments')->field('topicid')->where(array('userid'=>$userid))->group('topicid')->order('addtime desc')->limit($limit)->select();		
 		foreach($myTopics as $item){
 			$strTopic = $this->getOneTopic($item['topicid']);
 			$arrTopics[] = $strTopic;
@@ -104,7 +104,7 @@ class group_topicsModel extends Model {
 		$where = array (
 				'commentid' => $referid,
 		);
-		$strComment = D('group_topics_comments')->where( $where )->find();
+		$strComment = M('group_topics_comments')->where( $where )->find();
 		$strComment['user'] = D('user')->getOneUser($strComment['userid']);
 		$strComment['content'] = h($strComment['content']);
 	
@@ -113,9 +113,9 @@ class group_topicsModel extends Model {
 	// 删除话题的单个或多个评论$commentid='1,2,3' 以逗号分隔
 	public function delComment($commentid){
 		$where['commentid'] = array('exp',' IN ('.$commentid.') ');
-		$arrComment = D('group_topics_comments')->field('topicid')->where($where)->select();
+		$arrComment = M('group_topics_comments')->field('topicid')->where($where)->select();
 		if($arrComment){
-			D('group_topics_comments')->where($where)->delete();
+			M('group_topics_comments')->where($where)->delete();
 			//更新帖子评论统计
 			foreach ($arrComment as $item){
 				$map['topicid'] = $item['topicid'];
@@ -130,7 +130,7 @@ class group_topicsModel extends Model {
 	// 根据topicid删除话题的所有评论
 	public function delTopicComment($topicid){
 		$where['topicid']  = $topicid;
-		$arrComment = D('group_topics_comments')->where($where)->select();
+		$arrComment = M('group_topics_comments')->where($where)->select();
 	
 		foreach($arrComment as $item){
 			$this->delComment($item['commentid']);
@@ -157,11 +157,11 @@ class group_topicsModel extends Model {
 				}
 			}
 			//删除评论表
-			D('group_topics_comments')->where($where)->delete();
+			M('group_topics_comments')->where($where)->delete();
 			//删除喜欢收藏表
 			D('group_topics_collects')->where($where)->delete();
 			//删除tag标签表
-			D('tag_topic_index')->where($where)->delete();
+			M('tag_topic_index')->where($where)->delete();
 			//删除图片
 			D('images')->delAllImage('topic',$topicid);
 			//删除视频

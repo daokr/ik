@@ -69,7 +69,7 @@ __EXTENDS_JS__
              </li>             
 
              <li>
-             <a href="<?php echo U('group/index');?>">小组</a>
+             <a href="<?php echo U('group/index/index');?>">小组</a>
              </li>
              
              <li><a href="<?php echo U('article/index/index');?>">阅读</a></li>  
@@ -136,7 +136,7 @@ __EXTENDS_JS__
 </h1>
 
 <ul>
-    <?php if($strUser[userid] == $visitor[userid]): ?><li><a href="<?php echo U('public/message/ikmail',array(ik=>inbox));?>">站内信</a></li>
+    <?php if($strUser[userid] == $visitor[userid]): ?><li><a href="<?php echo U('public/message/ikmail',array(d=>inbox));?>">站内信</a></li>
     <li><a href="<?php echo U('public/user/setbase');?>">设置</a></li><?php endif; ?>
 </ul>
 
@@ -161,7 +161,7 @@ __EXTENDS_JS__
     <?php if(!empty($arrMyTopic)): ?><table width="100%">
         <?php if(is_array($arrMyTopic)): foreach($arrMyTopic as $key=>$item): ?><tr>
         <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
-        <a href="<?php echo U('group/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
+        <a href="<?php echo U('group/index/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
         <td><?php if($item[count_comment]): echo ($item[count_comment]); endif; ?></td>
         <td style="width:120px;text-align:right;color:#999999;"><?php echo date('Y-m-d H:i',$item[addtime]) ?></td>
         </tr><?php endforeach; endif; ?>
@@ -188,7 +188,7 @@ __EXTENDS_JS__
     <?php if(!empty($arrMyComment)): ?><table width="100%">
     <?php if(is_array($arrMyComment)): foreach($arrMyComment as $key=>$item): ?><tr>
         <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
-        <a href="<?php echo U('group/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
+        <a href="<?php echo U('group/index/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
         <td><?php if($item[count_comment]): echo ($item[count_comment]); endif; ?></td>
         <td style="width:120px;text-align:right;color:#999999;"><?php echo date('Y-m-d H:i',$item[addtime]) ?></td>
         </tr><?php endforeach; endif; ?>
@@ -215,7 +215,7 @@ __EXTENDS_JS__
     <?php if(!empty($arrMyCollect)): ?><table width="100%">
     <?php if(is_array($arrMyCollect)): foreach($arrMyCollect as $key=>$item): ?><tr>
         <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
-        <a href="<?php echo U('group/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
+        <a href="<?php echo U('group/index/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
         <td><?php if($item[count_comment]): echo ($item[count_comment]); endif; ?></td>
         <td style="width:120px;text-align:right;color:#999999;"><?php echo date('Y-m-d H:i',$item[addtime]) ?></td>
         </tr><?php endforeach; endif; ?>
@@ -321,7 +321,7 @@ __EXTENDS_JS__
         </h2>
     
         <?php if(is_array($arrMyGroup)): foreach($arrMyGroup as $key=>$item): ?><dl class="ob"><dt><a href="<?php echo U('group/show',array('id'=>$item[groupid]));?>"><img alt="<?php echo ($item[groupname]); ?>" class="m_sub_img" src="<?php echo ($item[icon_48]); ?>"></a></dt>
-            <dd><a href="<?php echo U('group/show',array('id'=>$item[groupid]));?>"><?php echo ($item[groupname]); ?></a> <span>(<?php echo ($item[count_user]); ?>)</span></dd>
+            <dd><a href="<?php echo U('group/index/show',array('id'=>$item[groupid]));?>"><?php echo ($item[groupname]); ?></a> <span>(<?php echo ($item[count_user]); ?>)</span></dd>
             </dl><?php endforeach; endif; ?>
     
         <div class="clear"></div>
@@ -329,9 +329,10 @@ __EXTENDS_JS__
 	<br/>
 	<p class="pl">本页永久链接: <a href="__SITE_URL__space/<?php echo ($strUser[doname]); ?>">__SITE_URL__space/<?php echo ($strUser[doname]); ?></a></p>
 	<br>
-    <p class="pl">订阅<?php echo ($strUser[username]); ?>的收藏 <br>
+<!--    <p class="pl">订阅<?php echo ($strUser[username]); ?>的收藏 <br>
         <span class="feed"><a href="#"> feed: rss 2.0</a></span>
     </p>
+    -->
 </div>
 
 

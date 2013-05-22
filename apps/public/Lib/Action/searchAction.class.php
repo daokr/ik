@@ -7,8 +7,8 @@ class searchAction extends frontendAction {
 	public function _initialize() {
 		parent::_initialize ();
 		
-		$this->group_topics_mod = D ( 'group_topics' );
-		$this->group_mod = D ( 'group' );
+		$this->group_topics_mod = D ( 'group://group_topics' );
+		$this->group_mod = D ( 'group://group' );
 		$this->user_mod = D ( 'user' );
 	}
 	public function index(){
@@ -135,10 +135,10 @@ class searchAction extends frontendAction {
 	}
 	function getsmenu($kw){
 		$menu = array(
-					'all' => array('url'=>U('search/index',array('type'=>'all','q'=>$kw)),'text'=>'全部'),
-					'group' => array('url'=>U('search/index',array('type'=>'group','q'=>$kw)),'text'=>'小组'),
-					'topic' => array('url'=>U('search/index',array('type'=>'topic','q'=>$kw)),'text'=>'帖子'),
-					'user' => array('url'=>U('search/index',array('type'=>'user','q'=>$kw)),'text'=>'用户'),
+					'all' => array('url'=>U('public/search/index',array('type'=>'all','q'=>$kw)),'text'=>'全部'),
+					'group' => array('url'=>U('public/search/index',array('type'=>'group','q'=>$kw)),'text'=>'小组'),
+					'topic' => array('url'=>U('public/search/index',array('type'=>'topic','q'=>$kw)),'text'=>'帖子'),
+					'user' => array('url'=>U('public/search/index',array('type'=>'user','q'=>$kw)),'text'=>'用户'),
 				);
 		return $menu;
 	}

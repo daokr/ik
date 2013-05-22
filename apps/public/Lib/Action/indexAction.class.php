@@ -6,16 +6,15 @@
 class indexAction extends frontendAction {
 	public function _initialize() {
 		parent::_initialize ();
-		//$this->group_mod = D ( 'group' );
+		$this->group_mod = D ( 'group://group' );
 		$this->user_mod = D ( 'user' );
-		//$this->group_topic_mod = D ( 'group_topics' );
-		//$this->article_mod = D('article');
+		$this->group_topic_mod = D ( 'group://group_topics' );
+		$this->article_mod = D('article://article');
 	}
 	public function index() {
 		// 来路
-		$ret_url = isset ( $_SERVER ['HTTP_REFERER'] ) ? $_SERVER ['HTTP_REFERER'] : __APP__;
-		
-/* 		//最新10个小组
+		$ret_url = __APP__;
+ 		//最新10个小组
 		$arrNewGroup = $this->group_mod->getNewGroup ( 10 );
 		$arrHotTopic = $this->group_topic_mod->getHotTopic(15);
 		//活跃会员
@@ -37,7 +36,7 @@ class indexAction extends frontendAction {
 		$this->assign ( 'arrNewArticle', $arrNewArticle );
 		$this->assign ( 'arrRecommendGroup', $arrRecommendGroup );
 		$this->assign ( 'arrHotUser', $arrHotUser );
-		$this->assign ( 'arrHotTopic', $arrHotTopic ); */
+		$this->assign ( 'arrHotTopic', $arrHotTopic ); 
 		$this->_config_seo ();
 		$this->display ();
 	}

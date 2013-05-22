@@ -666,7 +666,7 @@ class indexAction extends frontendAction {
 			$strTag = D('tag')->getOneTagByName($tag);
 			//查询
 			$map = array('tagid'=>$strTag['tagid']);
-			$arrID = D('tag_topic_index')->field('topicid')->where($map)->order('topicid DESC')->select();
+			$arrID = M('tag_topic_index')->field('topicid')->where($map)->order('topicid DESC')->select();
 			foreach ($arrID as $item){
 				$topicid[] = $item['topicid'];
 			}
@@ -827,9 +827,9 @@ class indexAction extends frontendAction {
 			$this->error("非法操作！"); 
 		}
 		
-		$recommendNum = D('group_topics_recommend')->where(array('topicid'=>$topicid))->count();
+		$recommendNum = M('group_topics_recommend')->where(array('topicid'=>$topicid))->count();
 		
-		$is_rec = D('group_topics_recommend')->where(array('userid'=>$this->userid, 'topicid'=>$topicid))->count();
+		$is_rec = M('group_topics_recommend')->where(array('userid'=>$this->userid, 'topicid'=>$topicid))->count();
 		
 		if($is_rec > 0){
 			//已经推荐过了
@@ -837,8 +837,8 @@ class indexAction extends frontendAction {
 		}else{
 			//执行
 			$arrData = array('userid'=>$this->userid, 'topicid'=>$topicid, 'content'=>$content,'addtime'=>time());
-			if (false !== D('group_topics_recommend')->create($arrData)) {
-				D('group_topics_recommend')->add ();
+			if (false !== M('group_topics_recommend')->create($arrData)) {
+				M('group_topics_recommend')->add ();
 				//帖子推荐数加1
 				$this->group_topics_mod->where(array('topicid'=>$topicid))->setInc('count_recommend');
 				$arrJson = array('r'=>0, 'num'=>$recommendNum+1);
@@ -852,7 +852,7 @@ class indexAction extends frontendAction {
 	public function delcomment(){
 		$commentid = $this->_get('commentid','intval');
 		$userid = $this->userid;
-		$strComment = D('group_topics_comments')->where(array('commentid'=>$commentid))->find();
+		$strComment = M('group_topics_comments')->where(array('commentid'=>$commentid))->find();
 		$strTopic = $this->group_topics_mod->getOneTopic($strComment['topicid']);
 		$strGroup = $this->_mod->getOneGroup($strTopic['groupid']);
 		

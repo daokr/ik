@@ -9,11 +9,11 @@ class indexAction extends frontendAction {
 		if ($this->visitor->is_login) {
 			$this->userid = $this->visitor->info ['userid'] > 0 ? $this->visitor->info ['userid'] : 0;
 		}
-		$this->group_mod = D ( 'group' );
+		$this->group_mod = D ( 'group://group' );
 		$this->user_mod = D ( 'user' );
 		$this->group_users_mod = M ( 'group_users' );
-		$this->group_topics_mod = D ( 'group_topics' );
-		$this->group_topics_collects = D ( 'group_topics_collects' );
+		$this->group_topics_mod = D ( 'group://group_topics' );
+		$this->group_topics_collects = D ( 'group://group_topics_collects' );
 		$this->group_topics_comments = M ( 'group_topics_comments' );
 	}
 	public function index() {	

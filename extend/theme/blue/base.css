@@ -193,8 +193,8 @@ a.bn-post:hover span{background-color:#63AB1A; border: 1px solid #50950E;}
 /*结构*/
  
 /*头部*/
-.top_nav {clear:both;width:100%;color:#fff; height:42px; line-height:42px;
-/*background-color:#545652;*/ background:url(head_bg1.png) repeat-x 0px 0px; }
+.top_nav {clear:both;width:100%;color:#fff; height:35px; line-height:35px;
+/*background-color:#545652;*/ background:#50555a; }
 .top_nav .top_bd{ width:100%; margin:0;}
 .top_nav .top_info{ float:right; margin-right:15px}
 .top_nav .top_items{ float:left; margin-left:15px; font-size:13px}

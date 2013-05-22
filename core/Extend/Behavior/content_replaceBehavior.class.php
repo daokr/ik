@@ -26,12 +26,17 @@ class content_replaceBehavior extends Behavior {
         $basecss = 'extend/theme/'.C('ik_site_theme').'/base.css';
         //APP风格默认样式
         $appcss = APPS_URL.APP_NAME.'/Static/css/style.css';
+        //APP风格下的module样式
+        $appmodulecss = APPS_URL.APP_NAME.'/Static/css/'.MODULE_NAME.'.css';
 
         if(is_file($basecss)){  
         	$sitecss = '@import url('.C('ik_site_url').$basecss.');';
         }
         if(is_file($appcss)){
         	$sitecss .= '@import url('.C('ik_site_url').$appcss.');';
+        }
+        if(is_file($appmodulecss)){
+        	$sitecss .= '@import url('.C('ik_site_url').$appmodulecss.');';
         }
         //开始替换css
         $replace['__SITE_THEME_CSS__'] = $sitecss;

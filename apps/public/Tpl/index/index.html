@@ -17,7 +17,7 @@
             <b>爱客网开源社区程序，内容互动性强，交流更方便</b><br><em>简单</em><em>快捷</em><em>方便</em><em>建设本地化，垂直型社区；目前已有<cite>{$count_user}</cite>位用户加入！</em>
             </div>
             <a class="submit" href="{:U('public/user/register')}">＋加入我们</a>
-            <a class="submit" href="{:U('help/download')}">↓源码下载</a>
+            <a class="submit" href="{:U('public/help/download')}">↓源码下载</a>
             </div>
             
             <div class="login">
@@ -36,7 +36,6 @@
             </div>
             <div class="item1">
             <input type="hidden" name="cktime" value="2592000" />
-            <input type="hidden" name="ret_url" value="{$ret_url}" />
             <input type="submit" tabindex="4" class="submit" value="登录" style="margin-left:10px">
             
             </div>
@@ -52,18 +51,18 @@
     
         <div class="cleft">
         
-            <h2>推荐小组<span class="pl">&nbsp;(<a href="{:U('group/explore')}">全部</a>) </span></h2>
+            <h2>推荐小组<span class="pl">&nbsp;(<a href="{:U('group/index/explore')}">全部</a>) </span></h2>
         
             <div style="overflow:hidden;">
             <foreach name="arrRecommendGroup" item="item">
             <div class="sub-item">
             <div class="pic">
-            <a href="{:U('group/show',array('id'=>$item[groupid]))}">
+            <a href="{:U('group/index/show',array('id'=>$item[groupid]))}">
             <img src="{$item[icon_48]}" alt="{$item[groupname]}">
             </a>
             </div>
             <div class="info">
-            <a href="{:U('group/show',array('id'=>$item[groupid]))}">{$item[groupname]}</a> ({$item[count_user]}/<font color="orange">{$item[count_topic]}</font>)             
+            <a href="{:U('group/index/show',array('id'=>$item[groupid]))}">{$item[groupname]}</a> ({$item[count_user]}/<font color="orange">{$item[count_topic]}</font>)             
             <p>{$item[groupdesc]}</p>
             </div>
             </div>
@@ -72,19 +71,19 @@
             <div class="clear"></div>
   
        
-            <h2>最热话题<span class="pl">&nbsp;(<a href="{:U('group/explore_topic')}">更多</a>) </span></h2>
+            <h2>最热话题<span class="pl">&nbsp;(<a href="{:U('group/index/explore_topic')}">更多</a>) </span></h2>
             <div class="topic-list">
                 <foreach name="arrHotTopic" item="item">
                 <dl>
                     <dt><a href="{:U('space/index/index',array('id'=>$item[user][doname]))}"><img src="{$item[user][face]}"/></a></dt>
                     <dd>
-                        <header class="title"><a href="{:U('group/topic',array('id'=>$item[topicid]))}" title="{$time[title]}">{$item[title]}</a></header>
+                        <header class="title"><a href="{:U('group/index/topic',array('id'=>$item[topicid]))}" title="{$time[title]}">{$item[title]}</a></header>
                          <a href="{:U('space/index/index',array('id'=>$item[user][doname]))}">{$item[user][username]}</a> <summary><php>echo getTime($item[addtime],time())</php> 阅读 {$item[count_view]} 评论 {$item[count_comment]}</summary>
                         <p>
                         <if condition="$item[video]">
-                        <a href="{:U('group/topic',array('id'=>$item[topicid]))}" title="{$time[title]}"><img src="{$item[video][imgurl]}" class="fr"></a>
+                        <a href="{:U('group/index/topic',array('id'=>$item[topicid]))}" title="{$time[title]}"><img src="{$item[video][imgurl]}" class="fr"></a>
                         <else/>
-                        <a href="{:U('group/topic',array('id'=>$item[topicid]))}" title="{$time[title]}"><img src="{$item[img][simg]}" class="fr"></a>
+                        <a href="{:U('group/index/topic',array('id'=>$item[topicid]))}" title="{$time[title]}"><img src="{$item[img][simg]}" class="fr"></a>
                         </if>
                         {$item[content]}
                         </p>
@@ -117,17 +116,17 @@
             <br clear="all"/>
             </div>
             
-            <h2>最新创建小组&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·<span class="pl">&nbsp;(<a href="{:U('group/explore')}">全部</a>) </span></h2>
+            <h2>最新创建小组&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·<span class="pl">&nbsp;(<a href="{:U('group/index/explore')}">全部</a>) </span></h2>
             <div class="line23">
             <foreach name="arrNewGroup" item="item">
             <a href="{:U('group/show',array('id'=>$item[groupid]))}">{$item[groupname]}</a> ({$item[count_user]}<if condition="$item[uptime] gt strtotime(date('Y-m-d 00:00:00'))">/<font color="orange">{$item[count_topic_today]}</font></if>)<br>
             </foreach>
             </div>
 
-			<h2>最新文章&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·<span class="pl">&nbsp;(<a href="{:U('article/index')}">全部</a>) </span></h2>
+			<h2>最新文章&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·<span class="pl">&nbsp;(<a href="{:U('article/index/index')}">全部</a>) </span></h2>
 			<div class="line23">
 			<foreach name="arrNewArticle" item="item">
-			<a href="{:U('article/show',array('id'=>$item[itemid]))}">{$item[title]}</a><br>
+			<a href="{:U('article/index/show',array('id'=>$item[itemid]))}">{$item[title]}</a><br>
  			</foreach>
 			</div>
             

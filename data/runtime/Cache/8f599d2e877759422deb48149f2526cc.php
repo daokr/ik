@@ -23,8 +23,7 @@
 <![endif]-->
 <script src="__STATIC__/public/js/dialog/jquery.artDialog.min5.js" type="text/javascript"></script> 
 __EXTENDS_JS__
-<script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21509482"></script>
-<link rel="stylesheet" type="text/css" href="__STATIC_CSS__/user.css" />
+<!--<script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21509482"></script>-->
 <link rel="stylesheet" type="text/css" href="__STATIC_CSS__/validate.css" />
 <script src="__STATIC__/public/js/validate/jquery.validateid.js"></script>
 
@@ -33,7 +32,7 @@ __EXTENDS_JS__
 <body>
 <!--头部开始-->
 <header>
-<?php if($app_name == 'public' && empty($visitor)): ?><div class="hd-wrap">
+<?php if($app_name == 'public' && empty($visitor) && $module_name == 'index'): ?><div class="hd-wrap">
             <div class="hd">
                 <div class="logo">
                     <h1><a href="__SITE_URL__" title="爱客开源">爱客开源</a></h1>
@@ -55,10 +54,10 @@ __EXTENDS_JS__
   <div class="top_bd">
     
     <div class="top_info">
-        <?php if(empty($visitor)): ?><a href="<?php echo U('public/user/login');?>">登录</a> | <a href="<?php echo U('public/user/register');?>">注册</a> | <a href="<?php echo U('oauth/index', array('mod'=>'qq'));?>" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="QQ登录" src="__STATIC__/public/images/connect_qq.png"> 登录</a> | <a href="<?php echo U('oauth/index', array('mod'=>'sina'));?>" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="新浪微博" src="__STATIC__/public/images/connect_sina_weibo.png"> 登录</a>    
+        <?php if(empty($visitor)): ?><a href="<?php echo U('public/user/login');?>">登录</a> | <a href="<?php echo U('public/user/register');?>">注册</a> | <a href="<?php echo U('public/oauth/index', array('mod'=>'qq'));?>" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="QQ登录" src="__STATIC__/public/images/connect_qq.png"> 登录</a> | <a href="<?php echo U('public/oauth/index', array('mod'=>'sina'));?>" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="新浪微博" src="__STATIC__/public/images/connect_sina_weibo.png"> 登录</a>    
         <?php else: ?>
         <a id="newmsg" href="<?php echo U('public/message/ikmail',array('d'=>'inbox'));?>">新消息(<?php echo ($count_new_msg); ?>)</a> | 
-        <a href="<?php echo U('space/index/index/index', array('id'=>$visitor['doname']));?>">
+        <a href="<?php echo U('space/index/index', array('id'=>$visitor['doname']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
         <a href="<?php echo U('public/user/setbase');?>">设置</a> | 
@@ -73,15 +72,15 @@ __EXTENDS_JS__
              </li>             
 
              <li>
-             <a href="<?php echo U('group/index');?>">小组</a>
+             <a href="<?php echo U('group/index/index');?>">小组</a>
              </li>
              
-             <li><a href="<?php echo U('article/index');?>">阅读</a></li>  
-             <li><a href="<?php echo U('location/index');?>">同城</a></li>
-             <li><a href="<?php echo U('mall/index');?>">淘客</a></li>  
-             <li><a href="<?php echo U('site/index');?>">小站</a></li>
-             <li><a href="<?php echo U('app/index');?>">应用商店</a></li>             
-             <li><a href="<?php echo U('help/download');?>" style="color:#fff">IKPHP源码下载</a></li>                                                      
+             <li><a href="<?php echo U('article/index/index');?>">阅读</a></li>  
+             <li><a href="<?php echo U('location/index/index');?>">同城</a></li>
+             <li><a href="<?php echo U('mall/index/index');?>">淘客</a></li>  
+             <li><a href="<?php echo U('site/index/index');?>">小站</a></li>
+             <li><a href="<?php echo U('app/index/index');?>">应用商店</a></li>             
+             <li><a href="<?php echo U('help/index/download');?>" style="color:#fff">IKPHP源码下载</a></li>                                                      
 
         </ul>
     </div>
@@ -299,10 +298,11 @@ obj.src = $(obj).attr('url') + '&nowtime=' + new Date().getTime();
             · <a href="<?php echo U('help/privacy');?>">隐私申明</a>
         </span>
         <div class="cl"></div>
-        <p>Powered by <a class="softname" href="<?php echo (IKPHP_SITEURL); ?>"><?php echo (IKPHP_SITENAME); ?></a> <?php echo (IKPHP_VERSION); ?>  目前有 <?php echo ($count_online_user); ?> 人在线<br />
+        <p>Powered by <a class="softname" href="<?php echo (IKPHP_SITEURL); ?>"><?php echo (IKPHP_SITENAME); ?></a> <?php echo (IKPHP_VERSION); ?>  
+        <font color="green">ThinkPHP版本<?php echo (THINK_VERSION); ?></font>  目前有 <?php echo ($count_online_user); ?> 人在线<br />
         <span style="font-size:0.83em;">{__RUNTIME__}          </span>
 
-        <script src="http://s6.cnzz.com/stat.php?id=5262498&web_id=5262498" language="JavaScript"></script>
+        <!--<script src="http://s6.cnzz.com/stat.php?id=5262498&web_id=5262498" language="JavaScript"></script>-->
        
         </p>   
     </div>

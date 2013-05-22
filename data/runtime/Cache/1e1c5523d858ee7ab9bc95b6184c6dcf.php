@@ -24,7 +24,7 @@
 <script src="__STATIC__/public/js/dialog/jquery.artDialog.min5.js" type="text/javascript"></script> 
 __EXTENDS_JS__
 <!--<script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21509482"></script>-->
-<link rel="stylesheet" type="text/css" href="__STATIC_CSS__/user.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC_CSS__/<?php echo ($module_name); ?>.css" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/theme/<?php echo C('ik_site_theme');?>/user/images/validate.css" />
 </head>
 
@@ -53,7 +53,7 @@ __EXTENDS_JS__
   <div class="top_bd">
     
     <div class="top_info">
-        <?php if(empty($visitor)): ?><a href="<?php echo U('public/user/login');?>">登录</a> | <a href="<?php echo U('public/user/register');?>">注册</a> | <a href="<?php echo U('oauth/index', array('mod'=>'qq'));?>" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="QQ登录" src="__STATIC__/public/images/connect_qq.png"> 登录</a> | <a href="<?php echo U('oauth/index', array('mod'=>'sina'));?>" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="新浪微博" src="__STATIC__/public/images/connect_sina_weibo.png"> 登录</a>    
+        <?php if(empty($visitor)): ?><a href="<?php echo U('public/user/login');?>">登录</a> | <a href="<?php echo U('public/user/register');?>">注册</a> | <a href="<?php echo U('public/oauth/index', array('mod'=>'qq'));?>" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="QQ登录" src="__STATIC__/public/images/connect_qq.png"> 登录</a> | <a href="<?php echo U('public/oauth/index', array('mod'=>'sina'));?>" target="_blank" style="margin-left:10px"><img  align="absmiddle" title="新浪微博" src="__STATIC__/public/images/connect_sina_weibo.png"> 登录</a>    
         <?php else: ?>
         <a id="newmsg" href="<?php echo U('public/message/ikmail',array('d'=>'inbox'));?>">新消息(<?php echo ($count_new_msg); ?>)</a> | 
         <a href="<?php echo U('space/index/index', array('id'=>$visitor['doname']));?>">
@@ -71,15 +71,15 @@ __EXTENDS_JS__
              </li>             
 
              <li>
-             <a href="<?php echo U('group/index');?>">小组</a>
+             <a href="<?php echo U('group/index/index');?>">小组</a>
              </li>
              
-             <li><a href="<?php echo U('article/index');?>">阅读</a></li>  
-             <li><a href="<?php echo U('location/index');?>">同城</a></li>
-             <li><a href="<?php echo U('mall/index');?>">淘客</a></li>  
-             <li><a href="<?php echo U('site/index');?>">小站</a></li>
-             <li><a href="<?php echo U('app/index');?>">应用商店</a></li>             
-             <li><a href="<?php echo U('help/download');?>" style="color:#fff">IKPHP源码下载</a></li>                                                      
+             <li><a href="<?php echo U('article/index/index');?>">阅读</a></li>  
+             <li><a href="<?php echo U('location/index/index');?>">同城</a></li>
+             <li><a href="<?php echo U('mall/index/index');?>">淘客</a></li>  
+             <li><a href="<?php echo U('site/index/index');?>">小站</a></li>
+             <li><a href="<?php echo U('app/index/index');?>">应用商店</a></li>             
+             <li><a href="<?php echo U('help/index/download');?>" style="color:#fff">IKPHP源码下载</a></li>                                                      
 
         </ul>
     </div>

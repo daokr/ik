@@ -35,7 +35,7 @@
         <foreach name="arrMyTopic" item="item">
         <tr>
         <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
-        <a href="{:U('group/topic',array('id'=>$item[topicid]))}">{$item[title]}</a>&nbsp;&nbsp;</td>
+        <a href="{:U('group/index/topic',array('id'=>$item[topicid]))}">{$item[title]}</a>&nbsp;&nbsp;</td>
         <td><if condition="$item[count_comment]">{$item[count_comment]}</if></td>
         <td style="width:120px;text-align:right;color:#999999;"><php> echo date('Y-m-d H:i',$item[addtime])</php></td>
         </tr>
@@ -68,7 +68,7 @@
     <foreach name="arrMyComment" item="item">
         <tr>
         <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
-        <a href="{:U('group/topic',array('id'=>$item[topicid]))}">{$item[title]}</a>&nbsp;&nbsp;</td>
+        <a href="{:U('group/index/topic',array('id'=>$item[topicid]))}">{$item[title]}</a>&nbsp;&nbsp;</td>
         <td><if condition="$item[count_comment]">{$item[count_comment]}</if></td>
         <td style="width:120px;text-align:right;color:#999999;"><php> echo date('Y-m-d H:i',$item[addtime])</php></td>
         </tr>
@@ -101,7 +101,7 @@
     <foreach name="arrMyCollect" item="item">
         <tr>
         <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
-        <a href="{:U('group/topic',array('id'=>$item[topicid]))}">{$item[title]}</a>&nbsp;&nbsp;</td>
+        <a href="{:U('group/index/topic',array('id'=>$item[topicid]))}">{$item[title]}</a>&nbsp;&nbsp;</td>
         <td><if condition="$item[count_comment]">{$item[count_comment]}</if></td>
         <td style="width:120px;text-align:right;color:#999999;"><php> echo date('Y-m-d H:i',$item[addtime])</php></td>
         </tr>
@@ -220,7 +220,7 @@
     
         <foreach name="arrMyGroup" item="item">
             <dl class="ob"><dt><a href="{:U('group/show',array('id'=>$item[groupid]))}"><img alt="{$item[groupname]}" class="m_sub_img" src="{$item[icon_48]}"></a></dt>
-            <dd><a href="{:U('group/show',array('id'=>$item[groupid]))}">{$item[groupname]}</a> <span>({$item[count_user]})</span></dd>
+            <dd><a href="{:U('group/index/show',array('id'=>$item[groupid]))}">{$item[groupname]}</a> <span>({$item[count_user]})</span></dd>
             </dl>
         </foreach>
     
@@ -229,9 +229,10 @@
 	<br/>
 	<p class="pl">本页永久链接: <a href="__SITE_URL__space/{$strUser[doname]}">__SITE_URL__space/{$strUser[doname]}</a></p>
 	<br>
-    <p class="pl">订阅{$strUser[username]}的收藏 <br>
+<!--    <p class="pl">订阅{$strUser[username]}的收藏 <br>
         <span class="feed"><a href="#"> feed: rss 2.0</a></span>
     </p>
+    -->
 </div>
 
 

@@ -61,7 +61,7 @@
                                     <a href="{:U('article/index/show',array('id'=>$item[aid]))}">（更多）</a>
 								</div>
 							</div>
-							<a href="{:U('people/index',array('id'=>$item[user][doname]))}">{$item[user][username]}</a> <span class="time">发表于 <php>echo date('Y-m-d H:i',$item[addtime])</php> 评论 {$item[count_comment]} | 浏览 {$item[count_view]}</span> 
+							<a href="{:U('space/index/index',array('id'=>$item[user][doname]))}">{$item[user][username]}</a> <span class="time">发表于 <php>echo date('Y-m-d H:i',$item[addtime])</php> 评论 {$item[count_comment]} | 浏览 {$item[count_view]}</span> 
 						</li>
 						</foreach>
 

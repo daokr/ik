@@ -13,5 +13,8 @@ return array(
 	'APP_DEBUG'=>true,
 	'DB_FIELD_CACHE'=>false,
 	'HTML_CACHE_ON'=>false,
+
+	'SHOW_RUN_TIME'    => true, // 运行时间显示
+	'SHOW_ADV_TIME'    => true, // 显示详细的运行时间
 );
 ?>

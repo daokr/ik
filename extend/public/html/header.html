@@ -1,6 +1,6 @@
 <!--头部开始-->
 <header>
-<if condition="$app_name eq 'public' && empty($visitor)">
+<if condition="$app_name eq 'public' && empty($visitor) && $module_name eq 'index'">
 <div class="hd-wrap">
             <div class="hd">
                 <div class="logo">
@@ -76,7 +76,7 @@
                     <li><a href="{$item[url]}" class="a_{$key}">{$item[name]}</a></li>
                     </foreach>
 			    </ul>
-		   <form onsubmit="return searchForm(this);" method="GET" action="{:U('search/index')}">
+		   <form onsubmit="return searchForm(this);" method="GET" action="index.php?app=public&m=search">
                 <input type="hidden" value="all" name="type">
                 <div id="search_bar">
                     <div class="inp"><input type="text" placeholder="小组、话题、日志、成员、小站" value="" class="key" name="q"></div>

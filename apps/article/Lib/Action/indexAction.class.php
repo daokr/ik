@@ -81,17 +81,27 @@ class indexAction extends frontendAction {
 			$userid = $this->userid;
 			$id = $this->_post ( 'id' );
 			
+			$item ['userid'] = $userid;
+			$item ['cateid'] = $this->_post ( 'cateid', 'intval' );
+			$item ['title'] = $this->_post ( 'title', 'trim' );
+			$item ['addtime'] = time ();
+				
+			$data ['content'] = $this->_post ( 'content' );
+			$data ['postip'] = get_client_ip ();
+			$data ['newsauthor'] = $this->visitor->get ( 'username' );
+			$data ['newsfrom'] = $this->_post ( 'newsfrom', 'trim', '' );
+			$data ['newsfromurl'] = $this->_post ( 'newsfromurl', 'trim', '' );	
+			
+			//安全性判断
+			if(empty($item ['title']) || empty($item ['cateid']) || empty($item ['content'])){
+				$this->error('标题、分类、内容都必须填写！');
+			}elseif (mb_strlen($item ['title'],'utf8')>50){
+				$this->error('标题太长了！');
+			}elseif (mb_strlen($item ['content'],'utf8')>20000){
+				$this->error('文章内容太长了！');
+			}
+				
 			if (empty ( $id )) {
-				$item ['userid'] = $userid;
-				$item ['cateid'] = $this->_post ( 'cateid', 'intval' );
-				$item ['title'] = $this->_post ( 'title', 'trim' );
-				$item ['addtime'] = time ();
-					
-				$data ['content'] = $this->_post ( 'content' );
-				$data ['postip'] = get_client_ip ();
-				$data ['newsauthor'] = $this->visitor->get ( 'username' );
-				$data ['newsfrom'] = $this->_post ( 'newsfrom', 'trim', '' );
-				$data ['newsfromurl'] = $this->_post ( 'newsfromurl', 'trim', '' );				
 				// 新增
 				if (false !== $this->item_mod->create ( $item )) {
 					$itemid = $data ['itemid'] = $this->item_mod->add ();
@@ -132,16 +142,7 @@ class indexAction extends frontendAction {
 					}
 				}
 			} else {
-				$item ['userid'] = $userid;
-				$item ['cateid'] = $this->_post ( 'cateid', 'intval' );
-				$item ['title'] = $this->_post ( 'title', 'trim' );
-				$item ['uptime'] = time ();
-					
-				$data ['content'] = $this->_post ( 'content' );
-				$data ['postip'] = get_client_ip ();
-				$data ['newsauthor'] = $this->visitor->get ( 'username' );
-				$data ['newsfrom'] = $this->_post ( 'newsfrom', 'trim', '' );
-				$data ['newsfromurl'] = $this->_post ( 'newsfromurl', 'trim', '' );				
+			
 				// 更新
 				$arrItemid = $this->mod->field('itemid')->where(array ('aid' => $id) )->find();
 				$this->mod->where ( array ('aid' => $id) )->save ( $data );
@@ -176,7 +177,7 @@ class indexAction extends frontendAction {
 				
 			}
 			
-			$this->redirect ( 'article/show', array (
+			$this->redirect ( 'article/index/show', array (
 					'id' => $id 
 			) );
 		} else {
@@ -236,7 +237,7 @@ class indexAction extends frontendAction {
 		if($strArticle['userid']!=$user['userid']) $this->error('您没有权限删除该文章');
 		// 执行删除
 		$this->mod->delOneArticle($id);
-		$this->success('删除成功！',U('article/index'));
+		$this->success('删除成功！',U('article/index/index'));
 	}
 	// 文章详情页
 	public function show() {
@@ -335,9 +336,11 @@ class indexAction extends frontendAction {
 		$this->display ();
 	}
 	//我的文章
-	public function my_article	(){
+	public function my_article(){
 		$userid = $this->userid;
 		if($userid>0 && $strUser = $this->user_mod->getOneUser($userid)){
+			
+			$this->error('开发中。。。。。');
 			
 			$this->_config_seo ( array (
 					'title' => '我的文章',

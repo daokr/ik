@@ -24,7 +24,7 @@
 <script src="__STATIC__/public/js/dialog/jquery.artDialog.min5.js" type="text/javascript"></script> 
 __EXTENDS_JS__
 <!--<script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21509482"></script>-->
-<link rel="stylesheet" type="text/css" href="__STATIC_CSS__/user.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC_CSS__/<?php echo ($module_name); ?>.css" />
 </head>
 
 <body>
@@ -70,15 +70,15 @@ __EXTENDS_JS__
              </li>             
 
              <li>
-             <a href="<?php echo U('group/index');?>">小组</a>
+             <a href="<?php echo U('group/index/index');?>">小组</a>
              </li>
              
-             <li><a href="<?php echo U('article/index');?>">阅读</a></li>  
-             <li><a href="<?php echo U('location/index');?>">同城</a></li>
-             <li><a href="<?php echo U('mall/index');?>">淘客</a></li>  
-             <li><a href="<?php echo U('site/index');?>">小站</a></li>
-             <li><a href="<?php echo U('app/index');?>">应用商店</a></li>             
-             <li><a href="<?php echo U('help/download');?>" style="color:#fff">IKPHP源码下载</a></li>                                                      
+             <li><a href="<?php echo U('article/index/index');?>">阅读</a></li>  
+             <li><a href="<?php echo U('location/index/index');?>">同城</a></li>
+             <li><a href="<?php echo U('mall/index/index');?>">淘客</a></li>  
+             <li><a href="<?php echo U('site/index/index');?>">小站</a></li>
+             <li><a href="<?php echo U('app/index/index');?>">应用商店</a></li>             
+             <li><a href="<?php echo U('help/index/download');?>" style="color:#fff">IKPHP源码下载</a></li>                                                      
 
         </ul>
     </div>
@@ -126,18 +126,18 @@ __EXTENDS_JS__
     	<div class="cleft">
         	<div class="tabnav">
 <ul>
-    <?php if($ik == 'outbox'): ?><li class="select"><a href="<?php echo U('message/ikmail',array(d=>outbox));?>">发件箱</a></li>
+    <?php if($ik == 'outbox'): ?><li class="select"><a href="<?php echo U('public/message/ikmail',array(d=>outbox));?>">发件箱</a></li>
     <?php else: ?>
-    	<li><a href="<?php echo U('message/ikmail',array(d=>outbox));?>">发件箱</a></li><?php endif; ?>
-    <?php if($ik == 'inbox' OR $ik == 'spam' OR $ik == 'unread'): ?><li class="select"><a href="<?php echo U('message/ikmail',array(d=>inbox));?>">收件箱</a></li>
+    	<li><a href="<?php echo U('public/message/ikmail',array(d=>outbox));?>">发件箱</a></li><?php endif; ?>
+    <?php if($ik == 'inbox' OR $ik == 'spam' OR $ik == 'unread'): ?><li class="select"><a href="<?php echo U('public/message/ikmail',array(d=>inbox));?>">收件箱</a></li>
     <?php else: ?>
-    	<li><a href="<?php echo U('message/ikmail',array(d=>inbox));?>">收件箱</a></li><?php endif; ?>    
+    	<li><a href="<?php echo U('public/message/ikmail',array(d=>inbox));?>">收件箱</a></li><?php endif; ?>    
 </ul>
 </div>
 
 
             <div class="clear"></div>
-		 <form  method="post" onSubmit="return isConfirmed" action="<?php echo U('message/doing',array('d'=>'all'));?>">
+		 <form  method="post" onSubmit="return isConfirmed" action="<?php echo U('public/message/doing',array('d'=>'all'));?>">
          <table class="olt">
               <tbody>
                 <tr>
@@ -151,11 +151,11 @@ __EXTENDS_JS__
                 <?php if(is_array($arrMessage)): foreach($arrMessage as $key=>$item): ?><tr>
                   <td><span class="doumail_from"><?php echo ($item[touser][username]); ?></span></td>
                   <td class="m" align="center">&gt;</td>
-                  <td><a href="<?php echo U('message/show',array('messageid'=>$item[messageid]));?>"><?php echo ($item[title]); ?></a></td>
+                  <td><a href="<?php echo U('public/message/show',array('messageid'=>$item[messageid]));?>"><?php echo ($item[title]); ?></a></td>
                   <td><?php echo ($item[addtime]); ?></td>
                   <td align="center"><input name="messageid[]" value="<?php echo ($item[messageid]); ?>" type="checkbox"></td>
                   <td style="display: none;" class="mail_options">
-                  <a onClick="return confirm('真的要删除消息吗？')" class="post_link" href="<?php echo U('message/doing',array('d'=>'del','type'=>'outbox','messageid'=>$item[messageid]));?>">删除</a>
+                  <a onClick="return confirm('真的要删除消息吗？')" class="post_link" href="<?php echo U('public/message/doing',array('d'=>'del','type'=>'outbox','messageid'=>$item[messageid]));?>">删除</a>
                   </td>
                 </tr><?php endforeach; endif; ?>
                 <tr>
@@ -171,8 +171,8 @@ __EXTENDS_JS__
          </form>   
         </div>
         <div class="cright">
-			<p class="pl2">&gt; <a href="<?php echo U('message/ikmail',array('d'=>'choose'));?>">给我关注的人写信</a></p>
-<p class="pl2">&gt; <a href="<?php echo U('user/follow',array('userid'=>$userid));?>">去我关注的人列表</a></p>     
+			<p class="pl2">&gt; <a href="<?php echo U('public/message/ikmail',array('d'=>'choose'));?>">给我关注的人写信</a></p>
+<p class="pl2">&gt; <a href="<?php echo U('public/user/follow',array('userid'=>$userid));?>">去我关注的人列表</a></p>     
         </div>
     </div>
 </div>

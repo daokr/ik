@@ -16,10 +16,10 @@
 <foreach name="arrGroup" item="item">
     <div class="result">
     <div class="pic">
-    <a title="{$item[groupname]}" href="{:U('group/show',array('id'=>$item[groupid]))}" class="nbg"><img alt="{$item[groupname]}" src="{$item[icon_48]}" width="48" /></a>
+    <a title="{$item[groupname]}" href="{:U('group/index/show',array('id'=>$item[groupid]))}" class="nbg"><img alt="{$item[groupname]}" src="{$item[icon_48]}" width="48" /></a>
     </div>
     <div class="content">
-    <h3><span>[小组] </span>&nbsp;<a  href="{:U('group/show',array('id'=>$item[groupid]))}">{$item[groupname]}</a></h3>
+    <h3><span>[小组] </span>&nbsp;<a  href="{:U('group/index/show',array('id'=>$item[groupid]))}">{$item[groupname]}</a></h3>
     <div class="info">创建于 <php> echo date('Y-m-d',$item[addtime])</php> &nbsp; {$item[count_user]} 成员</div>
     <p>{$item[groupdesc]}</p>
     </div>
