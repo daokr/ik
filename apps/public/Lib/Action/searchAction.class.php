@@ -13,12 +13,12 @@ class searchAction extends frontendAction {
 	}
 	public function index(){
 		$type = $this->_get('type','trim','all');
-		$kw = $this->_get('q','trim,t','');
-		
+		$kw = $this->_post('q','trim,t','');
+
 		$this->assign('kw',$kw);
 		$this->assign('type',$type);
 		$this->assign('menu',$this->getsmenu($kw));
-		if(IS_GET){
+		if(IS_POST){
 			switch($type){
 				case "all":
 
@@ -131,14 +131,16 @@ class searchAction extends frontendAction {
 					$this->display('s_'.$type);							
 					break;
 			}
+		}else{
+			$this->display('s_'.$type);
 		}
 	}
 	function getsmenu($kw){
 		$menu = array(
-					'all' => array('url'=>U('public/search/index',array('type'=>'all','q'=>$kw)),'text'=>'全部'),
-					'group' => array('url'=>U('public/search/index',array('type'=>'group','q'=>$kw)),'text'=>'小组'),
-					'topic' => array('url'=>U('public/search/index',array('type'=>'topic','q'=>$kw)),'text'=>'帖子'),
-					'user' => array('url'=>U('public/search/index',array('type'=>'user','q'=>$kw)),'text'=>'用户'),
+					'all' => array('url'=>U('public/search/index',array('type'=>'all')),'text'=>'全部'),
+					'group' => array('url'=>U('public/search/index',array('type'=>'group')),'text'=>'小组'),
+					'topic' => array('url'=>U('public/search/index',array('type'=>'topic')),'text'=>'帖子'),
+					'user' => array('url'=>U('public/search/index',array('type'=>'user')),'text'=>'用户'),
 				);
 		return $menu;
 	}

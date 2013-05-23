@@ -1092,3 +1092,35 @@ CREATE TABLE `ik_album_cate` (
   `seo_desc` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_app`
+--
+DROP TABLE IF EXISTS `ik_app`;
+CREATE TABLE `ik_app` (
+  `app_id` int(11) NOT NULL AUTO_INCREMENT,
+  `app_name` varchar(255) NOT NULL COMMENT 'app名称',
+  `app_alias` varchar(255) NOT NULL COMMENT 'app别名',
+  `description` text COMMENT '描述',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0:''关闭'',1:开启',
+  `host_type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0，1',
+  `app_entry` varchar(255) DEFAULT NULL COMMENT '前台入口，例：''group/index''',
+  `icon_url` varchar(255) DEFAULT NULL COMMENT '小图标地址',
+  `large_icon_url` varchar(255) DEFAULT NULL COMMENT '图标地址',
+  `admin_entry` varchar(255) DEFAULT NULL COMMENT '后台管理地址',
+  `statistics_entry` varchar(255) DEFAULT NULL COMMENT '接口地址',
+  `display_order` smallint(5) NOT NULL DEFAULT '0' COMMENT '排序',
+  `setuptime` int(11) DEFAULT NULL COMMENT '安装时间戳',
+  `version` varchar(255) DEFAULT NULL COMMENT '版本号',
+  `api_key` varchar(255) DEFAULT NULL COMMENT '用户api_key',
+  `secure_key` varchar(255) DEFAULT NULL COMMENT 'API密钥',
+  `author_name` varchar(255) NOT NULL COMMENT '作者',
+  `author_url` varchar(255) DEFAULT NULL COMMENT '作者网站',
+  `child_menu` text NOT NULL COMMENT '子导航数据',
+  PRIMARY KEY (`app_id`),
+  KEY `app_name` (`app_name`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+INSERT INTO `ik_app` VALUES ('1', 'group', '小组', '小组是一个大家一起讨论热门话题的地方', '1', '0',
+'index/index', '', '', 'group/admin/index', 'Statistics/statistics', '3', '1369285707', '1.5', '', '', '爱客软件',  'http://www.ikphp.com', 'a:0:{}');

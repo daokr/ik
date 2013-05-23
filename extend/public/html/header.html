@@ -76,7 +76,7 @@
                     <li><a href="{$item[url]}" class="a_{$key}">{$item[name]}</a></li>
                     </foreach>
 			    </ul>
-		   <form onsubmit="return searchForm(this);" method="GET" action="index.php?app=public&m=search">
+		   <form onsubmit="return searchForm(this);" method="post" action="{:U('public/search/index')}">
                 <input type="hidden" value="all" name="type">
                 <div id="search_bar">
                     <div class="inp"><input type="text" placeholder="小组、话题、日志、成员、小站" value="" class="key" name="q"></div>

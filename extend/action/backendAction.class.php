@@ -29,8 +29,8 @@ class backendAction extends baseAction
     }
     //检查登录状态
     public function check_login() {
-    	if ( (!isset($_SESSION['admin']) || !$_SESSION['admin']) && !in_array(ACTION_NAME, array('login','verify_code')) ) {
-    		$this->redirect('index/login');
+    	if ( (!isset($_SESSION['admin']) || !$_SESSION['admin']) && !in_array(ACTION_NAME, array('login')) ) {
+    		$this->redirect('admin/index/login');
     	}else{
     		$this->assign('admin',$_SESSION['admin']);
     	}
@@ -38,9 +38,8 @@ class backendAction extends baseAction
     
     //更新配置文件
     protected function update_config($new_config, $config_file = '') {
-    	!is_file($config_file) && $config_file = CONF_PATH . 'home/config.php';
-    	if (is_writable($config_file)) {
-    		$config = require $config_file;
+    	if (is_file($config_file) && is_writable($config_file)) {
+    		$config = require $config_file; 
     		$config = array_merge($config, $new_config);
     		file_put_contents($config_file, "<?php \nreturn " . stripslashes(var_export($config, true)) . ";", LOCK_EX);
     		@unlink(RUNTIME_FILE);

@@ -1,0 +1,1 @@
+<?php	return array ( 'find' => array ( 0 => '/色魔/i', 1 => '/色相/i', ), 'replace' => array ( 0 => '**', 1 => '**', ), );?>

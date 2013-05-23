@@ -60,7 +60,7 @@ class indexAction extends backendAction {
     			'server_os' => PHP_OS,
     			'web_server' => $_SERVER["SERVER_SOFTWARE"],
     			'php_version' => PHP_VERSION,
-    			'mysql_vers' => mysql_get_server_info(),
+    			'mysql_ver' => mysql_get_server_info (),
     			'server_language' => $_SERVER[HTTP_ACCEPT_LANGUAGE],
     			'gd_info' => $gd,
     			'document_root' => $_SERVER[DOCUMENT_ROOT],
@@ -94,7 +94,7 @@ class indexAction extends backendAction {
     		'email' => $admin['email'],
     		));
     		M('admin')->where(array('userid'=>$admin['userid']))->save(array('last_time'=>time(), 'last_ip'=>get_client_ip()));
-    		$this->success(L('login_success'), U('index/index'));
+    		$this->success(L('login_success'), U('admin/index/index'));
     	} else {
     		$this->display();
     	}
@@ -102,7 +102,7 @@ class indexAction extends backendAction {
     //admin 退出
     public function logout() {
     	session('admin', null);
-    	$this->success(L('logout_success'), U('index/login'));
+    	$this->success(L('logout_success'), U('admin/index/login'));
     	exit;
     }
   

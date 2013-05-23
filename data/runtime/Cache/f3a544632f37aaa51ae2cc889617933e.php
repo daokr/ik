@@ -100,7 +100,7 @@ __EXTENDS_JS__
 			    <ul id="nav_bar">
                     <?php if(is_array($arrNav)): foreach($arrNav as $key=>$item): ?><li><a href="<?php echo ($item[url]); ?>" class="a_<?php echo ($key); ?>"><?php echo ($item[name]); ?></a></li><?php endforeach; endif; ?>
 			    </ul>
-		   <form onsubmit="return searchForm(this);" method="GET" action="<?php echo U('public/search/index');?>">
+		   <form onsubmit="return searchForm(this);" method="post" action="<?php echo U('public/search/index');?>">
                 <input type="hidden" value="all" name="type">
                 <div id="search_bar">
                     <div class="inp"><input type="text" placeholder="小组、话题、日志、成员、小站" value="" class="key" name="q"></div>
@@ -128,7 +128,7 @@ __EXTENDS_JS__
 </div>
 
 <div class="mod-search">
-  <form method="get" action="<?php echo U('search/index',array('type'=>$type));?>">
+  <form method="POST" action="<?php echo U('public/search/index',array('type'=>$type));?>">
     <fieldset>
       <legend>搜索：</legend>
       <div class="inp"><input name="q" value="<?php echo ($kw); ?>" maxlength="60" size="22" ></div>

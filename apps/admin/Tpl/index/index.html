@@ -82,12 +82,12 @@ function refresh() {
 <body scroll="no" style="margin:0; padding:0;">
 
 <div class="header">
-    <div class="logo"><a href="{:U('index/index')}" >&nbsp;</a></div>
+    <div class="logo"><a href="{:U('admin/index/index')}" >&nbsp;</a></div>
     <div class="nav_sub">
        您好，{$admin.username} &nbsp; | <a href="./" target="_blank">返回前台</a> | 
        <a href="javascript:void(0);" onclick="refresh();">刷新</a> | 
-       <a href="javascript:void(0);" id="J_flush_cache" hidefocus="true" data-uri="{:U('cache/qclear')}" title="更新缓存">清除缓存</a> | 
-       <a href="{:U('index/logout')}">[退出]</a><br>    
+       <a href="javascript:void(0);" id="J_flush_cache" hidefocus="true" data-uri="{:U('admin/cache/qclear')}" title="更新缓存">清除缓存</a> | 
+       <a href="{:U('admin/index/logout')}">[退出]</a><br>    
     </div>
     <ul class="nav" id="topnav">	
 		<include file="public:topnav"/>
@@ -95,7 +95,7 @@ function refresh() {
 </div>
 <div class="LeftMenu">
     <div class="menubox">
-        <ul id="root_index" class="MenuList" data-uri="{:U('index/left')}"></ul>
+        <ul id="root_index" class="MenuList" data-uri="{:U('admin/index/left')}"></ul>
         <div class="cl"></div>
     </div>
                         
@@ -103,7 +103,7 @@ function refresh() {
 
 <div class="right_main">
 	<div class="header_line"><span>&nbsp;</span></div>
-	<iframe width="100%" scrolling="yes" height="100%" frameborder="0" noresize="" src="{:U('index/main')}" name="MainIframe" id="MainIframe"></iframe>
+	<iframe width="100%" scrolling="yes" height="100%" frameborder="0" noresize="" src="{:U('admin/index/main')}" name="MainIframe" id="MainIframe"></iframe>
 </div>
 
 </body>
