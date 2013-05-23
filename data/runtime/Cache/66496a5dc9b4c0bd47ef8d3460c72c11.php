@@ -18,7 +18,9 @@
 <table cellpadding="0" cellspacing="0">
 	<tr>
 		<th>应用名称：</th>
-		<td><?php echo ($strApp[app_name]); ?></td>
+		<td><?php echo ($strApp[app_name]); ?>
+        <input   name="app_name" value="<?php echo ($strApp[app_name]); ?>" type="hidden"/>
+        <input   name="app_id" value="<?php echo ($strApp[app_id]); ?>" type="hidden"/></td>
 	</tr>
 	<tr>
 		<th>应用别名：</th>
@@ -35,9 +37,45 @@
 		<td>
         <input type="radio"  <?php if($strApp[status] == 1): ?>checked<?php endif; ?> name="status" value="1" /> 开启 
         <input type="radio"  <?php if($strApp[status] == 0): ?>checked<?php endif; ?> name="status" value="0" /> 关闭 
+        <input name="host_type" value="<?php echo ($strApp[host_type]); ?>" type="hidden"/>
         </td>
 	</tr>
-
+	<tr>
+		<th>前台入口：</th>
+		<td><input style="width: 300px;" name="app_entry" value="<?php echo ($strApp[app_entry]); ?>" maxlength="30"/></td>
+	</tr>
+	<tr>
+		<th>图标地址：</th>
+		<td><input style="width: 300px;" name="icon_url" value="<?php echo ($strApp[icon_url]); ?>" maxlength="100"/></td>
+	</tr>
+	<tr>
+		<th>大图标地址：</th>
+		<td><input style="width: 300px;" name="large_icon_url" value="<?php echo ($strApp[large_icon_url]); ?>" maxlength="100"/></td>
+	</tr> 
+	<tr>
+		<th>后台入口：</th>
+		<td><input style="width: 300px;" name="admin_entry" value="<?php echo ($strApp[admin_entry]); ?>" maxlength="60"/></td>
+	</tr>   
+	<tr>
+		<th>统计入口：</th>
+		<td><input style="width: 300px;" name="statistics_entry" value="<?php echo ($strApp[statistics_entry]); ?>" maxlength="60"/></td>
+	</tr> 
+    <tr>
+		<th>显示顺序：</th>
+		<td><input style="width: 50px;" name="version" value="<?php echo ($strApp[display_order]); ?>" maxlength="30"/> 在应用市场和导航上的显示顺序</td>
+	</tr>    
+	<tr>
+		<th>版本：</th>
+		<td><input style="width: 50px;" name="version" value="<?php echo ($strApp[version]); ?>" maxlength="30"/></td>
+	</tr> 
+	<tr>
+		<th>API_KEY：</th>
+		<td><input style="width: 300px;" name="api_key" value="<?php echo ($strApp[api_key]); ?>" maxlength="60"/></td>
+	</tr>         
+	<tr>
+		<th>API密钥：</th>
+		<td><input style="width: 300px;" name="secure_key" value="<?php echo ($strApp[secure_key]); ?>" maxlength="60"/></td>
+	</tr>                 
 	<tr>
 		<th>开发者：</th>
 		<td><input style="width: 300px;" name="author_name" value="<?php echo ($strApp[author_name]); ?>" maxlength="30"/></td>
@@ -45,13 +83,10 @@
 	<tr>
 		<th>开发者网址：</th>
 		<td><input style="width: 300px;" name="author_url" value="<?php echo ($strApp[author_url]); ?>" maxlength="100"/> 必须以http://开头，以/结尾</td>
-	</tr>
-	<tr>
-		<th>版本：</th>
-		<td><input style="width: 300px;" name="version" value="<?php echo ($strApp[version]); ?>" maxlength="30"/></td>
-	</tr>
-    
+	</tr> 
 </table>
+
+
 <div class="page_btn"><input type="submit" value="提 交" class="submit" /></div>
 
 </form>

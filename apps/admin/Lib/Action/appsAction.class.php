@@ -42,6 +42,7 @@ class appsAction extends backendAction {
 		if(!empty($install)){
 			$strApp = $this->app_mod->__getAppInfo($app_name);
 			$strApp['status'] = 1;
+			$strApp['display_order'] = 0;
 		}else{
 			
 		}
@@ -49,4 +50,20 @@ class appsAction extends backendAction {
 		$this->display();
 	}
 	//保存
+	public function saveapp(){
+		if(empty($_POST['app_name']) || empty($_POST['app_alias']) || empty($_POST['app_entry'])){
+			$this->error('安装失败，必填项不能为空');
+		}
+		if(IS_POST){
+			$status = $this->app_mod->saveApp($_POST);
+			if($status === true){
+			
+			}else{
+				$this->error($status);
+			}
+		}
+	}
+	
+	
+	
 }

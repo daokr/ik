@@ -13363,3 +13363,1830 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:0.000345s ]
 INFO: [ view_end ] --END-- [ RunTime:0.000433s ]
 
+[ 2013-05-23T21:47:25+08:00 ] 127.0.0.1 /ik/
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.108766s ]
+INFO: Run load_lang Behavior [ RunTime:0.042726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.151769s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.028096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.021893s ]
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1369315944 [ RunTime:0.019272s ]
+SQL: SHOW COLUMNS FROM `ik_group` [ RunTime:0.010757s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.009178s ]
+SQL: SHOW COLUMNS FROM `ik_group_topics` [ RunTime:0.015992s ]
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.020740s ]
+SQL: SELECT `groupid` FROM `ik_group` WHERE ( `isshow` = 0 ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.001996s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_group` WHERE ( `groupid` = 2 ) LIMIT 1   [ RunTime:0.000451s ]
+SQL: SELECT * FROM `ik_group` WHERE ( `groupid` = 2 ) LIMIT 1   [ RunTime:0.000508s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_group` WHERE ( `groupid` = 1 ) LIMIT 1   [ RunTime:0.000534s ]
+SQL: SELECT * FROM `ik_group` WHERE ( `groupid` = 1 ) LIMIT 1   [ RunTime:0.000492s ]
+SQL: SELECT `userid`,`topicid`,`groupid`,`content`,`title` FROM `ik_group_topics` WHERE ( `groupid` > 0 ) AND ( `isaudit` = 0 ) ORDER BY istop desc,addtime desc LIMIT 15   [ RunTime:0.013537s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_group_topics` WHERE ( `topicid` = 2 ) LIMIT 1   [ RunTime:0.000336s ]
+SQL: SELECT * FROM `ik_group_topics` WHERE ( `topicid` = 2 ) LIMIT 1   [ RunTime:0.000361s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.000423s ]
+SQL: SHOW COLUMNS FROM `ik_area` [ RunTime:0.013211s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 52 ) LIMIT 1   [ RunTime:0.001892s ]
+SQL: SHOW COLUMNS FROM `ik_user_online` [ RunTime:0.003575s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_user_online` WHERE ( `userid` = 1 ) AND ( `ctime` > 1369315945 ) LIMIT 1   [ RunTime:0.001424s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_group_topics` WHERE ( `topicid` = 5 ) LIMIT 1   [ RunTime:0.000280s ]
+SQL: SELECT * FROM `ik_group_topics` WHERE ( `topicid` = 5 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 2 ) LIMIT 1   [ RunTime:0.000327s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_user_online` WHERE ( `userid` = 2 ) AND ( `ctime` > 1369315945 ) LIMIT 1   [ RunTime:0.000404s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_group_topics` WHERE ( `topicid` = 3 ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: SELECT * FROM `ik_group_topics` WHERE ( `topicid` = 3 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 52 ) LIMIT 1   [ RunTime:0.000571s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_user_online` WHERE ( `userid` = 1 ) AND ( `ctime` > 1369315945 ) LIMIT 1   [ RunTime:0.000372s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_group_topics` WHERE ( `topicid` = 1 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SELECT * FROM `ik_group_topics` WHERE ( `topicid` = 1 ) LIMIT 1   [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `ik_images` [ RunTime:0.018135s ]
+SQL: SELECT * FROM `ik_images` WHERE ( `type` = 'topic' ) AND ( `typeid` = 1 ) AND ( `seqid` = 1 ) LIMIT 1   [ RunTime:0.002022s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.000494s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 52 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_user_online` WHERE ( `userid` = 1 ) AND ( `ctime` > 1369315945 ) LIMIT 1   [ RunTime:0.000267s ]
+SQL: SELECT * FROM `ik_images` WHERE ( `type` = 'topic' ) AND ( `typeid` = 1 ) AND ( `seqid` = 1 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SELECT * FROM `ik_images` WHERE ( `type` = 'topic' ) AND ( `typeid` = 1 ) AND ( `seqid` = 1 ) LIMIT 1   [ RunTime:0.000353s ]
+SQL: SELECT `userid` FROM `ik_user` WHERE ( `isenable` = 0 ) ORDER BY uptime desc LIMIT 12   [ RunTime:0.000331s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 52 ) LIMIT 1   [ RunTime:0.000485s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_user_online` WHERE ( `userid` = 1 ) AND ( `ctime` > 1369315945 ) LIMIT 1   [ RunTime:0.000265s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 2 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_user_online` WHERE ( `userid` = 2 ) AND ( `ctime` > 1369315945 ) LIMIT 1   [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.005808s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001287s ]
+SQL: SELECT * FROM `ik_group` WHERE ( `isrecommend` = 1 ) ORDER BY groupid asc LIMIT 10   [ RunTime:0.000354s ]
+NOTIC: [8] Undefined variable: result D:\APMServ5.2.6\www\htdocs\ik\apps\group\Lib\Model\groupModel.class.php 第 132 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\APMServ5.2.6\www\htdocs\ik\apps\public\Lib\Action\indexAction.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_user` LIMIT 1   [ RunTime:0.000214s ]
+NOTIC: [8] Undefined variable: arrRecommendGroup D:\APMServ5.2.6\www\htdocs\ik\apps\public\Lib\Action\indexAction.class.php 第 37 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.056978s ]
+INFO: [ view_template ] --END-- [ RunTime:0.057121s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant userid - assumed 'userid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 122 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant face - assumed 'face' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant topicid - assumed 'topicid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Undefined variable: time D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant addtime - assumed 'addtime' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant count_view - assumed 'count_view' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant count_comment - assumed 'count_comment' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant video - assumed 'video' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 190 行.
+NOTIC: [8] Use of undefined constant topicid - assumed 'topicid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Undefined variable: time D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant img - assumed 'img' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant simg - assumed 'simg' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 193 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant face - assumed 'face' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant topicid - assumed 'topicid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Undefined variable: time D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant addtime - assumed 'addtime' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant count_view - assumed 'count_view' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant count_comment - assumed 'count_comment' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant video - assumed 'video' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 190 行.
+NOTIC: [8] Use of undefined constant topicid - assumed 'topicid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Undefined variable: time D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant img - assumed 'img' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant simg - assumed 'simg' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 193 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant face - assumed 'face' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant topicid - assumed 'topicid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Undefined variable: time D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant addtime - assumed 'addtime' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant count_view - assumed 'count_view' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant count_comment - assumed 'count_comment' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant video - assumed 'video' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 190 行.
+NOTIC: [8] Use of undefined constant topicid - assumed 'topicid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Undefined variable: time D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant img - assumed 'img' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant simg - assumed 'simg' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 193 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant face - assumed 'face' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 185 行.
+NOTIC: [8] Use of undefined constant topicid - assumed 'topicid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Undefined variable: time D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 187 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant addtime - assumed 'addtime' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant count_view - assumed 'count_view' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant count_comment - assumed 'count_comment' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 188 行.
+NOTIC: [8] Use of undefined constant video - assumed 'video' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 190 行.
+NOTIC: [8] Use of undefined constant topicid - assumed 'topicid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Undefined variable: time D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant img - assumed 'img' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant simg - assumed 'simg' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 192 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 193 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 207 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 208 行.
+NOTIC: [8] Use of undefined constant face - assumed 'face' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 208 行.
+NOTIC: [8] Use of undefined constant isonline - assumed 'isonline' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 210 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 213 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 213 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 207 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 208 行.
+NOTIC: [8] Use of undefined constant face - assumed 'face' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 208 行.
+NOTIC: [8] Use of undefined constant isonline - assumed 'isonline' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 210 行.
+NOTIC: [8] Use of undefined constant doname - assumed 'doname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 213 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 213 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 221 行.
+NOTIC: [8] Use of undefined constant groupname - assumed 'groupname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 221 行.
+NOTIC: [8] Use of undefined constant count_user - assumed 'count_user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 221 行.
+NOTIC: [8] Use of undefined constant uptime - assumed 'uptime' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 221 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 221 行.
+NOTIC: [8] Use of undefined constant groupname - assumed 'groupname' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 221 行.
+NOTIC: [8] Use of undefined constant count_user - assumed 'count_user' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 221 行.
+NOTIC: [8] Use of undefined constant uptime - assumed 'uptime' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 221 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 226 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\ff657b5534bf0260a4d9ba48ee2e8e9f.php 第 226 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.376782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.376902s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.027037s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.024132s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.028991s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.042818s ]
+INFO: Run content_replace Behavior [ RunTime:0.043440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.166893s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.032471s ]
+INFO: [ view_end ] --END-- [ RunTime:0.032597s ]
+
+[ 2013-05-23T21:47:32+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=login
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000413s ]
+INFO: Run load_lang Behavior [ RunTime:0.001904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002510s ]
+NOTIC: [8] Undefined index:  admin D:\APMServ5.2.6\www\htdocs\ik\extend\action\backendAction.class.php 第 35 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003317s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003448s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.212606s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.212745s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001479s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001580s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001395s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001509s ]
+INFO: Run content_replace Behavior [ RunTime:0.004241s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010577s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001555s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001652s ]
+
+[ 2013-05-23T21:47:36+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=login
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000428s ]
+INFO: Run load_lang Behavior [ RunTime:0.001659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002280s ]
+NOTIC: [8] Undefined index:  admin D:\APMServ5.2.6\www\htdocs\ik\extend\action\backendAction.class.php 第 35 行.
+SQL: SHOW COLUMNS FROM `ik_admin` [ RunTime:0.023822s ]
+SQL: SELECT * FROM `ik_admin` WHERE ( `email` = 'admin@admin.com' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000732s ]
+SQL: UPDATE `ik_admin` SET `last_time`=1369316856,`last_ip`='127.0.0.1' WHERE ( `userid` = 1 ) [ RunTime:0.025582s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002078s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002199s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\89e55c87a99d54ce3e8d5d01b54ec9ad.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.031494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031617s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000490s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000385s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000318s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000407s ]
+INFO: Run content_replace Behavior [ RunTime:0.002077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003994s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000404s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2013-05-23T21:47:39+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=index
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000524s ]
+INFO: Run load_lang Behavior [ RunTime:0.001807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002604s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001745s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001973s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.060277s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060418s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000720s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000437s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000322s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000618s ]
+INFO: Run content_replace Behavior [ RunTime:0.002324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004778s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000416s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2013-05-23T21:47:39+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=main
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000493s ]
+INFO: Run load_lang Behavior [ RunTime:0.002010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002752s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 52 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 66 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001705s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001827s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\7440006e767e342b7331638ceab15b9b.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.134779s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.134909s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000461s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000535s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000336s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000414s ]
+INFO: Run content_replace Behavior [ RunTime:0.002032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004113s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000437s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2013-05-23T21:47:39+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001471s ]
+INFO: Run load_lang Behavior [ RunTime:0.007629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009353s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003841s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003992s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.061388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061527s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001641s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001711s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001428s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001500s ]
+INFO: Run content_replace Behavior [ RunTime:0.004618s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011279s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001514s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001624s ]
+
+[ 2013-05-23T21:47:42+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=apps
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000550s ]
+INFO: Run load_lang Behavior [ RunTime:0.001850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002642s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001544s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001659s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016217s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000492s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000376s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000314s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000405s ]
+INFO: Run content_replace Behavior [ RunTime:0.002009s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003883s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000381s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2013-05-23T21:47:42+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000475s ]
+INFO: Run load_lang Behavior [ RunTime:0.001896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002612s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004454s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.001543s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002415s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002548s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.022595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022720s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000480s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000371s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000310s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000405s ]
+INFO: Run content_replace Behavior [ RunTime:0.002016s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003915s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000379s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000471s ]
+
+[ 2013-05-23T21:47:45+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=installed
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000415s ]
+INFO: Run load_lang Behavior [ RunTime:0.001842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002460s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004718s ]
+SQL: SELECT * FROM `ik_app`  [ RunTime:0.001803s ]
+
+[ 2013-05-23T21:47:48+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000413s ]
+INFO: Run load_lang Behavior [ RunTime:0.001596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002192s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004444s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.001676s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002214s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002345s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016492s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016614s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000477s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000374s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000321s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000408s ]
+INFO: Run content_replace Behavior [ RunTime:0.002031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003923s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000384s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000477s ]
+
+[ 2013-05-23T21:47:55+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000506s ]
+INFO: Run load_lang Behavior [ RunTime:0.001773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002514s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004355s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002043s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002165s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.034399s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034532s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000586s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000385s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000320s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000408s ]
+INFO: Run content_replace Behavior [ RunTime:0.002212s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004242s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000399s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2013-05-23T21:50:02+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001490s ]
+INFO: Run load_lang Behavior [ RunTime:0.003366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005101s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004544s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003252s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003399s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.022152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022280s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001499s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001370s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001277s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001680s ]
+INFO: Run content_replace Behavior [ RunTime:0.006510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012744s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001583s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001693s ]
+
+[ 2013-05-23T21:59:25+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001451s ]
+INFO: Run load_lang Behavior [ RunTime:0.003459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005157s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.005171s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002987s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003108s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Undefined index:  display_order D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Undefined index:  display_order D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 60 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019640s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001712s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001417s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001255s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001327s ]
+INFO: Run content_replace Behavior [ RunTime:0.004057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010170s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001357s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001460s ]
+
+[ 2013-05-23T21:59:46+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000585s ]
+INFO: Run load_lang Behavior [ RunTime:0.001997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002893s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.005353s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000732s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000919s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Undefined index:  display_order D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Undefined index:  display_order D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 60 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016580s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000505s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000371s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000310s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000406s ]
+INFO: Run content_replace Behavior [ RunTime:0.001972s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003877s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000376s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2013-05-23T22:12:29+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001516s ]
+INFO: Run load_lang Behavior [ RunTime:0.003853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005692s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.005029s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002467s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002582s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant host_type - assumed 'host_type' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 38 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Use of undefined constant statistics_entry - assumed 'statistics_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 63 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 67 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 79 行.
+NOTIC: [8] Undefined index:  display_order D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 79 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 83 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 87 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 88 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 89 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 90 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 91 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 92 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.022834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022962s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001689s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001316s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001414s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001375s ]
+INFO: Run content_replace Behavior [ RunTime:0.004215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010365s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001383s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001485s ]
+
+[ 2013-05-23T22:18:31+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001451s ]
+INFO: Run load_lang Behavior [ RunTime:0.003150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004853s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004476s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002777s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002905s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant host_type - assumed 'host_type' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 38 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Use of undefined constant statistics_entry - assumed 'statistics_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 63 行.
+NOTIC: [8] Undefined index:  display_order D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 63 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 67 行.
+NOTIC: [8] Use of undefined constant api_key - assumed 'api_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Undefined index:  api_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Use of undefined constant secure_key - assumed 'secure_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Undefined index:  secure_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 79 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 83 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020608s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001454s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001351s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001240s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001332s ]
+INFO: Run content_replace Behavior [ RunTime:0.004028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009737s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001319s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001415s ]
+
+[ 2013-05-23T22:19:55+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001497s ]
+INFO: Run load_lang Behavior [ RunTime:0.003815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005621s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004858s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002422s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002531s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant host_type - assumed 'host_type' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 38 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Use of undefined constant statistics_entry - assumed 'statistics_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 63 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 67 行.
+NOTIC: [8] Use of undefined constant api_key - assumed 'api_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Undefined index:  api_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Use of undefined constant secure_key - assumed 'secure_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Undefined index:  secure_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 79 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 83 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021150s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001535s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001582s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001260s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001345s ]
+INFO: Run content_replace Behavior [ RunTime:0.004203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010288s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001357s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001518s ]
+
+[ 2013-05-23T22:21:03+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=main
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001476s ]
+INFO: Run load_lang Behavior [ RunTime:0.003038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004728s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 52 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 66 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002522s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002630s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\7440006e767e342b7331638ceab15b9b.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.051644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051769s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001377s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001299s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001235s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001320s ]
+INFO: Run content_replace Behavior [ RunTime:0.003785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009341s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001304s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001398s ]
+
+[ 2013-05-23T22:21:06+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=apps
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001391s ]
+INFO: Run load_lang Behavior [ RunTime:0.003070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004683s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002378s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002482s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.072625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072749s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001449s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001489s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001371s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001332s ]
+INFO: Run content_replace Behavior [ RunTime:0.003776s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009772s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001317s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001404s ]
+
+[ 2013-05-23T22:21:06+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000462s ]
+INFO: Run load_lang Behavior [ RunTime:0.001674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002365s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.003708s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.000526s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002071s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002211s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.045120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045246s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000514s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000430s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000329s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000427s ]
+INFO: Run content_replace Behavior [ RunTime:0.002094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004162s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000437s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2013-05-23T22:21:52+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000606s ]
+INFO: Run load_lang Behavior [ RunTime:0.002171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003080s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.003718s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.001907s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002084s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002198s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015611s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000498s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000551s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000314s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000407s ]
+INFO: Run content_replace Behavior [ RunTime:0.002128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004218s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000386s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2013-05-23T22:22:12+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=index
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001467s ]
+INFO: Run load_lang Behavior [ RunTime:0.003285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005012s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002539s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002680s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.063090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063228s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001470s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001306s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001245s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001563s ]
+INFO: Run content_replace Behavior [ RunTime:0.003888s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009805s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001572s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001683s ]
+
+[ 2013-05-23T22:22:12+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=main
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000459s ]
+INFO: Run load_lang Behavior [ RunTime:0.001785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002479s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 52 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 66 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001746s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001870s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\7440006e767e342b7331638ceab15b9b.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.025093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025247s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000489s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000404s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000348s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000421s ]
+INFO: Run content_replace Behavior [ RunTime:0.002020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004040s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000416s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2013-05-23T22:22:13+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000489s ]
+INFO: Run load_lang Behavior [ RunTime:0.001749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002472s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001647s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001790s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015647s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000549s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000452s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000418s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000781s ]
+INFO: Run content_replace Behavior [ RunTime:0.002364s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005042s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000474s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2013-05-23T22:22:13+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=apps
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000466s ]
+INFO: Run load_lang Behavior [ RunTime:0.001761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002432s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000422s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000524s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.009888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010026s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000479s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000369s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000314s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000572s ]
+INFO: Run content_replace Behavior [ RunTime:0.001992s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004019s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000377s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000461s ]
+
+[ 2013-05-23T22:22:14+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000468s ]
+INFO: Run load_lang Behavior [ RunTime:0.002658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003366s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.005071s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.000609s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002160s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002295s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017315s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000555s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000653s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000390s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000470s ]
+INFO: Run content_replace Behavior [ RunTime:0.003441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005934s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000425s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2013-05-23T22:22:14+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000438s ]
+INFO: Run load_lang Behavior [ RunTime:0.001635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002287s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.005235s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.001777s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002387s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002534s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012163s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000453s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000395s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000367s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000425s ]
+INFO: Run content_replace Behavior [ RunTime:0.002074s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004108s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000437s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000543s ]
+
+[ 2013-05-23T22:22:57+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=apps
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000433s ]
+INFO: Run load_lang Behavior [ RunTime:0.001965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002658s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000481s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000601s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014990s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000474s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000373s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000311s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000400s ]
+INFO: Run content_replace Behavior [ RunTime:0.001975s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003831s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000372s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2013-05-23T22:22:57+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000405s ]
+INFO: Run load_lang Behavior [ RunTime:0.001567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002165s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.003535s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.000500s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002119s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002297s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015769s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015897s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000467s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000364s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000307s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000412s ]
+INFO: Run content_replace Behavior [ RunTime:0.002158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004203s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000420s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2013-05-23T22:23:04+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=apps
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000450s ]
+INFO: Run load_lang Behavior [ RunTime:0.001727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002394s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000421s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000525s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013457s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000472s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000597s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000343s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000405s ]
+INFO: Run content_replace Behavior [ RunTime:0.002046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004414s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000376s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000461s ]
+
+[ 2013-05-23T22:23:04+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000429s ]
+INFO: Run load_lang Behavior [ RunTime:0.001771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002419s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.003339s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.000645s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002231s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002384s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015295s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015426s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000467s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000367s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000308s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000401s ]
+INFO: Run content_replace Behavior [ RunTime:0.002090s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003971s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000417s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2013-05-23T22:23:12+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001644s ]
+INFO: Run load_lang Behavior [ RunTime:0.003596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005560s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.003632s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002632s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002822s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant host_type - assumed 'host_type' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 38 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Use of undefined constant statistics_entry - assumed 'statistics_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 63 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 67 行.
+NOTIC: [8] Use of undefined constant api_key - assumed 'api_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Undefined index:  api_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Use of undefined constant secure_key - assumed 'secure_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Undefined index:  secure_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 79 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 83 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.023188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023331s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001541s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001398s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001380s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001583s ]
+INFO: Run content_replace Behavior [ RunTime:0.004206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010544s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001487s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001608s ]
+
+[ 2013-05-23T22:24:02+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000410s ]
+INFO: Run load_lang Behavior [ RunTime:0.001626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002235s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.003473s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000552s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000689s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant host_type - assumed 'host_type' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 38 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Use of undefined constant statistics_entry - assumed 'statistics_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 63 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 67 行.
+NOTIC: [8] Use of undefined constant api_key - assumed 'api_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Undefined index:  api_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Use of undefined constant secure_key - assumed 'secure_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Undefined index:  secure_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 79 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 83 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018695s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000509s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000375s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000308s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000404s ]
+INFO: Run content_replace Behavior [ RunTime:0.002207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004125s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000382s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2013-05-23T22:25:00+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001491s ]
+INFO: Run load_lang Behavior [ RunTime:0.005058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006796s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.003500s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002613s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002742s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 25 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 29 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 36 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 37 行.
+NOTIC: [8] Use of undefined constant host_type - assumed 'host_type' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 38 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 43 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 47 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 51 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 55 行.
+NOTIC: [8] Use of undefined constant statistics_entry - assumed 'statistics_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 59 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 63 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 67 行.
+NOTIC: [8] Use of undefined constant api_key - assumed 'api_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Undefined index:  api_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 71 行.
+NOTIC: [8] Use of undefined constant secure_key - assumed 'secure_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Undefined index:  secure_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 75 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 79 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 83 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021775s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001455s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001397s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001248s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001339s ]
+INFO: Run content_replace Behavior [ RunTime:0.003879s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009649s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001512s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001615s ]
+
+[ 2013-05-23T22:30:02+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=main
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001536s ]
+INFO: Run load_lang Behavior [ RunTime:0.003371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005152s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 52 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 66 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002482s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002588s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\7440006e767e342b7331638ceab15b9b.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.023515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023635s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002357s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.002294s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002144s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002223s ]
+INFO: Run content_replace Behavior [ RunTime:0.005566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014964s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002239s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002338s ]
+
+[ 2013-05-23T22:30:03+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=setting
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000404s ]
+INFO: Run load_lang Behavior [ RunTime:0.001546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002129s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001927s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002035s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015348s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002320s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.002205s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002106s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002282s ]
+INFO: Run content_replace Behavior [ RunTime:0.005753s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014994s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002202s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002290s ]
+
+[ 2013-05-23T22:30:04+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=setting&a=index
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000403s ]
+INFO: Run load_lang Behavior [ RunTime:0.001649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002236s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.014545s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002656s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002789s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.034567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034700s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002383s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.002532s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002132s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002205s ]
+INFO: Run content_replace Behavior [ RunTime:0.005397s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015023s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002396s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2013-05-23T22:30:23+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=apps
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001451s ]
+INFO: Run load_lang Behavior [ RunTime:0.003103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004787s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002484s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002596s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.018044s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018164s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001409s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001277s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001220s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001369s ]
+INFO: Run content_replace Behavior [ RunTime:0.003971s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009579s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001326s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001414s ]
+
+[ 2013-05-23T22:30:23+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000457s ]
+INFO: Run load_lang Behavior [ RunTime:0.001619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002262s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.003566s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.000670s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002102s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002230s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016014s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000532s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000377s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000310s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000397s ]
+INFO: Run content_replace Behavior [ RunTime:0.001971s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003920s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000374s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2013-05-23T22:32:11+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001492s ]
+INFO: Run load_lang Behavior [ RunTime:0.003329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005171s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004634s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002441s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002557s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 22 行.
+NOTIC: [8] Use of undefined constant app_id - assumed 'app_id' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 23 行.
+NOTIC: [8] Undefined index:  app_id D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 23 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 27 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 31 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 38 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 39 行.
+NOTIC: [8] Use of undefined constant host_type - assumed 'host_type' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 40 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 45 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 49 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 53 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 57 行.
+NOTIC: [8] Use of undefined constant statistics_entry - assumed 'statistics_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 61 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 65 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 69 行.
+NOTIC: [8] Use of undefined constant api_key - assumed 'api_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 73 行.
+NOTIC: [8] Undefined index:  api_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 73 行.
+NOTIC: [8] Use of undefined constant secure_key - assumed 'secure_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 77 行.
+NOTIC: [8] Undefined index:  secure_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 77 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 81 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 85 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021215s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021340s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001602s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001715s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001357s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001408s ]
+INFO: Run content_replace Behavior [ RunTime:0.004083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010586s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001325s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001422s ]
+
+[ 2013-05-23T22:37:12+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=setting
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001614s ]
+INFO: Run load_lang Behavior [ RunTime:0.003811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005660s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002436s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002550s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.019255s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019376s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001427s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001294s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001235s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001392s ]
+INFO: Run content_replace Behavior [ RunTime:0.004400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010060s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001311s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001397s ]
+
+[ 2013-05-23T22:37:12+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=setting&a=index
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000397s ]
+INFO: Run load_lang Behavior [ RunTime:0.001532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002102s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.003569s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001892s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002012s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.021494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000524s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000370s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000307s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000403s ]
+INFO: Run content_replace Behavior [ RunTime:0.001978s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003898s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000373s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2013-05-23T22:37:15+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=setting&a=url
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000457s ]
+INFO: Run load_lang Behavior [ RunTime:0.001820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002518s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.004908s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002105s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002247s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\eff06e260ab48280ff6baf3964b3934b.php 第 21 行.
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\eff06e260ab48280ff6baf3964b3934b.php 第 29 行.
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\eff06e260ab48280ff6baf3964b3934b.php 第 41 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.058019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058147s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000484s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000371s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000310s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000405s ]
+INFO: Run content_replace Behavior [ RunTime:0.002489s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004393s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000421s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2013-05-23T22:46:55+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=apps
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001331s ]
+INFO: Run load_lang Behavior [ RunTime:0.003086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004626s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002630s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002744s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.022326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022449s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001423s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001298s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001238s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001335s ]
+INFO: Run content_replace Behavior [ RunTime:0.005729s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011354s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001350s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001438s ]
+
+[ 2013-05-23T22:46:55+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000409s ]
+INFO: Run load_lang Behavior [ RunTime:0.001553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002136s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.008780s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.000899s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002112s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002269s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019841s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000613s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000533s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000390s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000478s ]
+INFO: Run content_replace Behavior [ RunTime:0.003515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005975s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000522s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2013-05-23T22:46:57+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000451s ]
+INFO: Run load_lang Behavior [ RunTime:0.001639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002292s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004520s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001984s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002104s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 22 行.
+NOTIC: [8] Use of undefined constant app_id - assumed 'app_id' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 23 行.
+NOTIC: [8] Undefined index:  app_id D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 23 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 27 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 31 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 38 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 39 行.
+NOTIC: [8] Use of undefined constant host_type - assumed 'host_type' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 40 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 45 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 49 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 53 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 57 行.
+NOTIC: [8] Use of undefined constant statistics_entry - assumed 'statistics_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 61 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 65 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 69 行.
+NOTIC: [8] Use of undefined constant api_key - assumed 'api_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 73 行.
+NOTIC: [8] Undefined index:  api_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 73 行.
+NOTIC: [8] Use of undefined constant secure_key - assumed 'secure_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 77 行.
+NOTIC: [8] Undefined index:  secure_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 77 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 81 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 85 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020225s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000507s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000376s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000313s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000405s ]
+INFO: Run content_replace Behavior [ RunTime:0.002893s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004848s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000473s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2013-05-23T22:46:59+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=saveapp
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000405s ]
+INFO: Run load_lang Behavior [ RunTime:0.001548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002142s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004883s ]
+
+[ 2013-05-23T22:49:46+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=main
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001341s ]
+INFO: Run load_lang Behavior [ RunTime:0.003297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004855s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 52 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 66 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\ik\apps\admin\Lib\Action\indexAction.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002555s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002678s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\7440006e767e342b7331638ceab15b9b.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.036672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036806s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001679s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001389s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001244s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001327s ]
+INFO: Run content_replace Behavior [ RunTime:0.004071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010051s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001318s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001416s ]
+
+[ 2013-05-23T22:49:48+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=index&a=left&ik=apps
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000409s ]
+INFO: Run load_lang Behavior [ RunTime:0.001550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002136s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001437s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001544s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015075s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000501s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000368s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000309s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000396s ]
+INFO: Run content_replace Behavior [ RunTime:0.002064s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003937s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000397s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2013-05-23T22:49:48+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000408s ]
+INFO: Run load_lang Behavior [ RunTime:0.001560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002162s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004859s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.001193s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002012s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002140s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016910s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000525s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000399s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000335s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000438s ]
+INFO: Run content_replace Behavior [ RunTime:0.002327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004406s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000418s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2013-05-23T22:49:51+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=uninstall
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000410s ]
+INFO: Run load_lang Behavior [ RunTime:0.001555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002160s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004285s ]
+SQL: SELECT `app_name` FROM `ik_app` ORDER BY app_id DESC  [ RunTime:0.001591s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001967s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002081s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 28 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 29 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 30 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 31 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 32 行.
+NOTIC: [8] Use of undefined constant host_type_alias - assumed 'host_type_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 33 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 34 行.
+NOTIC: [8] Use of undefined constant doaction - assumed 'doaction' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 35 行.
+NOTIC: [8] Undefined variable: pageUrl D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\0543a1b99de22a04bd24ad4e44e8f6e2.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016797s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000487s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000396s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000313s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000410s ]
+INFO: Run content_replace Behavior [ RunTime:0.002211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004176s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000439s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2013-05-23T22:49:53+08:00 ] 127.0.0.1 /ik/index.php?app=admin&m=apps&a=preinstall&app_name=article&install=1
+NOTIC: [8] Constant MODULE_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 159 行.
+NOTIC: [8] Constant ACTION_NAME already defined D:\APMServ5.2.6\www\htdocs\ik\core\Lib\Core\Dispatcher.class.php 第 160 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000414s ]
+INFO: Run load_lang Behavior [ RunTime:0.001547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002153s ]
+SQL: SHOW COLUMNS FROM `ik_app` [ RunTime:0.004997s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002147s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002309s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 7 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 15 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 21 行.
+NOTIC: [8] Use of undefined constant app_name - assumed 'app_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 22 行.
+NOTIC: [8] Use of undefined constant app_id - assumed 'app_id' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 23 行.
+NOTIC: [8] Undefined index:  app_id D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 23 行.
+NOTIC: [8] Use of undefined constant app_alias - assumed 'app_alias' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 27 行.
+NOTIC: [8] Use of undefined constant description - assumed 'description' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 31 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 38 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 39 行.
+NOTIC: [8] Use of undefined constant host_type - assumed 'host_type' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 40 行.
+NOTIC: [8] Use of undefined constant app_entry - assumed 'app_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 45 行.
+NOTIC: [8] Use of undefined constant icon_url - assumed 'icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 49 行.
+NOTIC: [8] Use of undefined constant large_icon_url - assumed 'large_icon_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 53 行.
+NOTIC: [8] Use of undefined constant admin_entry - assumed 'admin_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 57 行.
+NOTIC: [8] Use of undefined constant statistics_entry - assumed 'statistics_entry' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 61 行.
+NOTIC: [8] Use of undefined constant display_order - assumed 'display_order' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 65 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 69 行.
+NOTIC: [8] Use of undefined constant api_key - assumed 'api_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 73 行.
+NOTIC: [8] Undefined index:  api_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 73 行.
+NOTIC: [8] Use of undefined constant secure_key - assumed 'secure_key' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 77 行.
+NOTIC: [8] Undefined index:  secure_key D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 77 行.
+NOTIC: [8] Use of undefined constant author_name - assumed 'author_name' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 81 行.
+NOTIC: [8] Use of undefined constant author_url - assumed 'author_url' D:\APMServ5.2.6\www\htdocs\ik\data\runtime\Cache\66496a5dc9b4c0bd47ef8d3460c72c11.php 第 85 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021732s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000703s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000387s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000309s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000400s ]
+INFO: Run content_replace Behavior [ RunTime:0.002104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004361s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000481s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000593s ]
+

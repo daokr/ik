@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo ($site_title); ?></title>
-<link rel="stylesheet" type="text/css" href="__ROOT__/apps/<?php echo ($app_name); ?>/Static/css/style.css" />
+<link rel="stylesheet" type="text/css" href="__ROOT__/apps/<?php echo ($app_name); ?>/Static/css/style.css" /> 
 </head>
 
 <body id="loginbody">
@@ -11,7 +11,7 @@
     <div class="login">
     
 <div class="info">
-<form method="post"action="<?php echo U('index/login');?>">
+<form method="post"action="<?php echo U('admin/index/login');?>">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <th height="35" scope="row">管理员Email：</th>
@@ -33,6 +33,5 @@
         
     </div>
 
-  <div style="font-size:0.83em; text-align:center;">{__RUNTIME__}</div>
 </body>
 </html>
