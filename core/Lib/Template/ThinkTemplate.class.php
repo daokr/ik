@@ -674,11 +674,15 @@ class  ThinkTemplate {
             	// 解析规则为 模板主题:模块:操作 不支持 跨项目和跨分组调用
             	$path   =  explode(':',$templateName);
             	$action = array_pop($path);
-            	//修改来自小麦 解析公用html
+            	//修改来自小麦 解析公用extend public html
             	if(substr($templateName,0,14) == '__PUBLICHTML__'){
             		
             		$templateName  =  PUBLICK_TPL_PATH.'/'.$action.$this->config['template_suffix'];
             		
+            	}elseif(substr($templateName,0,5) == 'IKAPP'){
+            		$_mod_name = array_pop($path);
+            		$_app_name = array_pop($path);
+            		$templateName  =  APPS_PATH.$_app_name.'/Tpl/'.$_mod_name.'/'.$action.$this->config['template_suffix'];
             	}else{
             		$module = !empty($path)?array_pop($path):MODULE_NAME; 
             		if(!empty($path) && THEME_NAME) {// 设置模板主题

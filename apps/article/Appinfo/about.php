@@ -1,6 +1,6 @@
 <?php
 /**
- * 小组版本信息
+ * 文章阅读版本信息
  * @author 小麦 <160780470@qq.com>
  * @version IKPHP 1.5
  */

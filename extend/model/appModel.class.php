@@ -100,8 +100,30 @@ class appModel extends Model {
 			
 			// 新增加应用操作
 			if ($this->isAppNameExist ( $data ['app_name'] )) {
-				return '应用已经存在'; // 应用已经存在
+				return $data ['app_name'].'应用已经存在'; // 应用已经存在
 			}
+			//获取应用信息
+			$oldInfo = $this->__getAppInfo ( $data ['app_name'] );
+			// 入库数据内容处理
+			empty ( $oldInfo ['child_menu'] ) && $oldInfo ['child_menu'] = array ();
+			$data ['child_menu'] = serialize ( $oldInfo ['child_menu'] );
+			
+			$install_script = APPS_PATH . '/' . $data ['app_name'] . '/Appinfo/install.php';
+			if (file_exists ( $install_script )) {
+				include_once $install_script;
+			}
+			//安装时间
+			$data ['setuptime'] = time ();
+			// 为便于排序，将order设置为ID
+			unset ( $data ['app_id'] );
+			
+			if ($insertID = $this->add ( $data )) {
+				// 成功入库之后执行的操作 还有其他继续执行
+				$this->where (array('app_ic'=>$insertID))->setField ( 'display_order', $insertID );
+				return true;
+			} else {
+				return '保存数据失败！'; // 数据插入失败
+			}			
 		}
 		
 	}	
@@ -148,9 +170,44 @@ class appModel extends Model {
 	 * @return array 应用列表数据
 	 */
 	public function getAppList($map = array(), $limit = '') {
-
 		$list = $this->where ( $map )->field ( 'app_id' )->order ( 'app_id DESC' )->limit($limit)->select();
-				
 		return $list;
+	}
+	/**
+	 * 获取单个应用
+	 * 
+	 * @param array $map
+	 * @return array 应用列表数据
+	 */
+	public function getOneApp($map = array()){
+		$res = $this->where($map)->find();
+		return $res;
+	}
+	/**
+	 * 后台卸载指定应用
+	 *
+	 * @param integer $app_id
+	 *        	应用ID
+	 * @return boolean 是否卸载成功
+	 */
+	public function uninstallApp($app_id) {
+		$map = array ();
+		$map ['app_id'] = $app_id;
+		$appinfo = $this->where ( $map )->find();
+		if (empty ( $appinfo )) {
+			return '应用不存在或未安装'; // 应用不存在或未安装
+		}
+		if ($this->where ( $map )->delete ()) {
+			$uninstall_script = APPS_PATH . '/' . $appinfo ['app_name'] . '/Appinfo/uninstall.php';
+			if (is_file ( $uninstall_script )) {
+				include_once $uninstall_script;
+			}
+			// 删除用户应用表中的数据 这版不开发 下版本开发
+			//$umap ['app_id'] = $app_id;
+			//D( 'UserApp' )->where ( $umap )->delete ();				
+			return true;
+		} else {
+			return '操作失败'; // 操作失败
+		}
 	}
 }

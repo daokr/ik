@@ -15,12 +15,12 @@
 <h2><?php echo ($title); ?></h2>
 <div class="tabnav">
 <ul>
-<li  <?php if($type == "index"): ?>class="select"<?php endif; ?> ><a href="<?php echo U('setting/index');?>">基本配置</a></li>
-<li  <?php if($type == "site"): ?>class="select"<?php endif; ?> ><a href="<?php echo U('setting/index',array('type'=>'site'));?>">全局配置</a></li>
-<li  <?php if($type == "attachment"): ?>class="select"<?php endif; ?> ><a href="<?php echo U('setting/index',array('type'=>'attachment'));?>">附件设置</a></li>
+<li  <?php if($type == "index"): ?>class="select"<?php endif; ?> ><a href="<?php echo U('admin/setting/index');?>">基本配置</a></li>
+<li  <?php if($type == "site"): ?>class="select"<?php endif; ?> ><a href="<?php echo U('admin/setting/index',array('type'=>'site'));?>">全局配置</a></li>
+<li  <?php if($type == "attachment"): ?>class="select"<?php endif; ?> ><a href="<?php echo U('admin/setting/index',array('type'=>'attachment'));?>">附件设置</a></li>
 </ul>
 </div>
-<form method="POST" action="<?php echo U('setting/edit');?>">
+<form method="POST" action="<?php echo U('admin/setting/edit');?>">
 <table cellpadding="0" cellspacing="0">
 
 	<tr>

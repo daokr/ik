@@ -64,32 +64,20 @@ __EXTENDS_JS__
 
     <div class="top_items">
         <ul>
-             <li>
-             <a href="__SITE_URL__">爱客</a>
-             </li>             
-
-             <li>
-             <a href="<?php echo U('group/index/index');?>">小组</a>
-             </li>
-             
-             <li><a href="<?php echo U('article/index/index');?>">阅读</a></li>  
-             <li><a href="<?php echo U('location/index/index');?>">同城</a></li>
-             <li><a href="<?php echo U('mall/index/index');?>">淘客</a></li>  
-             <li><a href="<?php echo U('site/index/index');?>">小站</a></li>
-             <li><a href="<?php echo U('app/index/index');?>">应用商店</a></li>             
-             <li><a href="<?php echo U('help/index/download');?>" style="color:#fff">IKPHP源码下载</a></li>                                                      
-
+             <?php if(is_array($topNav)): foreach($topNav as $key=>$item): ?><li><a href="<?php echo ($item[url]); ?>" title="<?php echo ($item[name]); ?>"><?php echo ($item[name]); ?></a></li><?php endforeach; endif; ?>
+             <li><a href="<?php echo U('public/apps/index');?>">应用商店</a></li>
+             <li><a href="<?php echo U('public/help/download');?>" style="color:#fff">IKPHP源码下载</a></li>                                                      
         </ul>
     </div>
   	<div class="cl"></div>
     
   </div>
   
-</div>
+</div><?php endif; ?>
+<!--APP NAV-->
 
+</header>
 <!--header-->
-
-
 <div id="header">
     
 	<div class="site_nav">
@@ -108,16 +96,10 @@ __EXTENDS_JS__
                 </div>
 		    </form>
 		</div>
-
         <div class="cl"></div>
-
 	</div>
         
-</div><?php endif; ?>
-
-<!--APP NAV-->
-
-</header>
+</div>
 <div class="midder">
     <?php if(empty($visitor[userid])): ?><div class="anony-nav">
             <div class="bd">

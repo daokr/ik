@@ -19,6 +19,17 @@ class indexAction extends backendAction {
     	 
     	$ik = $this->_get ( 'ik', 'trim' );
     	if(empty($ik)){ $ik = 'index';}
+    	//生成应用管理菜单 获取 应用Tpl 下的left_menu.html
+
+    	$filename = APPS_PATH . '/' . $ik . '/Appinfo/admin_menu.php';
+    	if(is_file($filename)){
+    		$info = include_once $filename;
+    		foreach ($info as $key=>$item){
+    			echo $item['submenu']['name'];
+
+    		}
+    	}
+    	
     	
     	$this->assign('ik', $ik);
     	$this->display();

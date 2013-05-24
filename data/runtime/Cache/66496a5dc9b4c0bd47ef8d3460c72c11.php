@@ -41,6 +41,14 @@
         </td>
 	</tr>
 	<tr>
+		<th>导航显示：</th>
+		<td>
+        <input type="radio"  <?php if($strApp[is_nav] == 1): ?>checked<?php endif; ?> name="is_nav" value="1" /> 是 
+        <input type="radio"  <?php if($strApp[is_nav] == 0): ?>checked<?php endif; ?> name="is_nav" value="0" /> 否 
+        <input name="host_type" value="<?php echo ($strApp[host_type]); ?>" type="hidden"/>
+        </td>
+	</tr>    
+	<tr>
 		<th>前台入口：</th>
 		<td><input style="width: 300px;" name="app_entry" value="<?php echo ($strApp[app_entry]); ?>" maxlength="30"/></td>
 	</tr>
@@ -86,7 +94,7 @@
 	</tr> 
 </table>
 
-
+<input  name="is_edit" value="<?php echo ($strApp[is_edit]); ?>" type="hidden"/>
 <div class="page_btn"><input type="submit" value="提 交" class="submit" /></div>
 
 </form>

@@ -142,6 +142,6 @@ return  array(
     'HTTP_CACHE_CONTROL'    =>  'private', // 网页缓存控制
     
 	/* 爱客系统应用配置 修改人小麦 */
-	'DEFAULT_APPS'          =>  array('public','admin','space','group'), //默认核心应用
+	'DEFAULT_APPS'          =>  array('public','admin','space'), //默认核心应用
 
 );

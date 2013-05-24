@@ -16,9 +16,9 @@ return array(
 	// 前台入口 [必填]（格式：Action/act）
 	'APP_ENTRY'					=> 'index/index',
 	// 为空
-	'ICON_URL'					=> 'apps/article/Appinfo/icon_app.png',
+	'ICON_URL'					=> 'apps/group/Appinfo/icon_app.png',
 	// 为空
-	'LARGE_ICON_URL'			=> 'apps/article/Appinfo/icon_app_large.png',
+	'LARGE_ICON_URL'			=> 'apps/group/Appinfo/icon_app_large.png',
 	// 版本号 [必填]
 	'VERSION'			=> '1.5',
 	// 后台入口 [选填]

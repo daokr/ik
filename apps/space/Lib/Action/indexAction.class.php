@@ -9,12 +9,20 @@ class indexAction extends frontendAction {
 		if ($this->visitor->is_login) {
 			$this->userid = $this->visitor->info ['userid'] > 0 ? $this->visitor->info ['userid'] : 0;
 		}
+		//应用所需 mod
 		$this->group_mod = D ( 'group://group' );
 		$this->user_mod = D ( 'user' );
 		$this->group_users_mod = M ( 'group_users' );
 		$this->group_topics_mod = D ( 'group://group_topics' );
 		$this->group_topics_collects = D ( 'group://group_topics_collects' );
 		$this->group_topics_comments = M ( 'group_topics_comments' );
+	}
+	protected  function _nav(){
+		$arrNav = array ();
+		$arrNav['index'] = array('name'=>'首页', 'url'=>C('ik_site_url'));
+		$arrNav['group'] = array('name'=>'小组', 'url'=>U('group/index/index'));
+		$arrNav['article'] = array('name'=>'阅读', 'url'=>U('article/index/index'));
+		return $arrNav;
 	}
 	public function index() {	
 		$doname = $this->_get ( 'id' );

@@ -38,21 +38,11 @@
 
     <div class="top_items">
         <ul>
-             <li>
-             <a href="__SITE_URL__">爱客</a>
-             </li>             
-
-             <li>
-             <a href="{:U('group/index/index')}">小组</a>
-             </li>
-             
-             <li><a href="{:U('article/index/index')}">阅读</a></li>  
-             <li><a href="{:U('location/index/index')}">同城</a></li>
-             <li><a href="{:U('mall/index/index')}">淘客</a></li>  
-             <li><a href="{:U('site/index/index')}">小站</a></li>
-             <li><a href="{:U('app/index/index')}">应用商店</a></li>             
-             <li><a href="{:U('help/index/download')}" style="color:#fff">IKPHP源码下载</a></li>                                                      
-
+             <foreach name="topNav" item="item" >
+              <li><a href="{$item[url]}" title="{$item[name]}">{$item[name]}</a></li>
+             </foreach>
+             <li><a href="{:U('public/apps/index')}">应用商店</a></li>
+             <li><a href="{:U('public/help/download')}" style="color:#fff">IKPHP源码下载</a></li>                                                      
         </ul>
     </div>
   	<div class="cl"></div>
@@ -60,38 +50,7 @@
   </div>
   
 </div>
-
-<!--header-->
-
-
-<div id="header">
-    
-	<div class="site_nav">
-        <div class="{$logo[style]}">
-            <a href="{$logo[url]}">{$logo[name]}</a>
-        </div>
-		<div class="appnav">
-			    <ul id="nav_bar">
-                    <foreach name="arrNav" item="item" >
-                    <li><a href="{$item[url]}" class="a_{$key}">{$item[name]}</a></li>
-                    </foreach>
-			    </ul>
-		   <form onsubmit="return searchForm(this);" method="post" action="{:U('public/search/index')}">
-                <input type="hidden" value="all" name="type">
-                <div id="search_bar">
-                    <div class="inp"><input type="text" placeholder="小组、话题、日志、成员、小站" value="" class="key" name="q"></div>
-                    <div class="inp-btn"><input type="submit" class="search-button" value="搜索"></div>
-                </div>
-		    </form>
-		</div>
-
-        <div class="cl"></div>
-
-	</div>
-        
-</div>
 </if>
-
 <!--APP NAV-->
 
 </header>

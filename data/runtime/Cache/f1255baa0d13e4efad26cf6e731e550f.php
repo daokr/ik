@@ -44,3 +44,5 @@
         	<li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('admin/apps/installed');?>" target="MainIframe">已安装的应用</a></li>
         </ul>
     </li><?php endif; ?>
+<!--引入其他应用的模版文件：格式 IKAPP:应用名:模型名:操作 如：IKAPP:group:admin:left_menu-->
+<?php if(is_array($admin_top_nav)): foreach($admin_top_nav as $key=>$item): endforeach; endif; ?>

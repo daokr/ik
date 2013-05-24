@@ -51,6 +51,19 @@ class indexAction extends frontendAction {
 		$this->group_topics_mod = D ( 'group_topics' );
 		$this->group_topics_collects = D ( 'group_topics_collects' );
 		$this->group_topics_comments = M ( 'group_topics_comments' );
+		//生成导航
+		$this->assign('arrNav',$this->_nav());
+	}
+	protected  function _nav(){
+		// 小组导航
+		if($this->visitor->info['userid']){
+			$arrNav['index'] = array('name'=>'我的小组', 'url'=>U('group/index/index'));
+		}
+		$arrNav['explore'] = array('name'=>'发现小组', 'url'=>U('group/index/explore'));
+		$arrNav['explore_topic'] = array('name'=>'发现话题', 'url'=>U('group/index/explore_topic'));
+		$arrNav['nearby'] = array('name'=>'北京话题', 'url'=>U('group/index/nearby'));
+		
+		return $arrNav;
 	}
 	public function index() {
 		if ($this->visitor->is_login) {

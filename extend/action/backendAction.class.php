@@ -22,7 +22,10 @@ class backendAction extends baseAction
         		'ikphp_email' => IKPHP_EMAIL,
        		
         );
-        $this->assign('ikphp', $ik_soft_info); 
+        $this->assign('ikphp', $ik_soft_info);
+        //应用mod
+        $this->app_mod = D ( 'app' );
+        $this->assign('admin_top_nav', $this->_getAdminNav());
     }
     protected function title($title){
     	$this->assign('title', $title);
@@ -58,6 +61,14 @@ class backendAction extends baseAction
     	$pager->setConfig('next', '后页>');
     	$pager->setConfig('theme', '%upPage% %first% %linkPage% %end% %downPage%');
     	return $pager;
+    }
+    /**
+     * 后台App导航菜单
+     *
+     */
+    protected function _getAdminNav(){
+    	$arrApp = $this->app_mod->field('app_name,app_alias,admin_entry')->order(array('display_order asc'))->select();
+    	return $arrApp;
     }   
 
     
