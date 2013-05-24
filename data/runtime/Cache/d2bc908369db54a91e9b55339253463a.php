@@ -1,41 +1,26 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title><?php echo ($seo["title"]); ?> - <?php echo ($seo["subtitle"]); ?></title>
-<meta name="keywords" content="<?php echo ($seo["keywords"]); ?>" /> 
-<meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
-<link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
-<style>__SITE_THEME_CSS__</style>
-<!--[if gte IE 7]><!-->
-    <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
-<!--<![endif]-->
-<!--[if lt IE 7]>
-    <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
-<![endif]-->
-<script>var siteUrl = '__SITE_URL__';</script>
+<?php if($module_name == 'admin): ?><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="160780470@qq.com" />
+<meta name="Copyright" content="<?php echo ($ikphp["ikphp_site_name"]); ?>" />
+<title><?php echo ($title); ?> - <?php echo ($site_title); ?></title>
+<link rel="stylesheet" type="text/css" href="__ROOT__/apps/admin/Static/css/style.css" />
 <script src="__STATIC__/public/js/jquery.js" type="text/javascript"></script>
-<script src="__STATIC__/public/js/common.js" type="text/javascript"></script>
-<script src="__STATIC__/public/js/IK.js" type="text/javascript" data-cfg-autoload="false"></script>
-<script src="__STATIC__/public/js/all.js" type="text/javascript"></script>
-<!--[if lt IE 9]>
-<script src="__STATIC__/public/js/html5.js"></script>
-<![endif]-->
-<script src="__STATIC__/public/js/dialog/jquery.artDialog.min5.js" type="text/javascript"></script> 
-__EXTENDS_JS__
-<!--<script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21509482"></script>-->
+<script src="__ROOT__/apps/admin/Static/js/common.js" type="text/javascript"></script>
+<?php else: ?>
+<title><?php echo C('ik_site_title');?> - <?php echo C('ik_site_subtitle');?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="<?php echo C('ik_site_keywords');?>" /> 
+<meta name="description" content="<?php echo C('ik_site_desc');?>" /> 
+<link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
+<meta name="robots" content="all" />
+<meta name="author" content="Powered by <?php echo (IKPHP_SITENAME); ?>" />
+<meta name="Copyright" content="Powered by <?php echo (IKPHP_SITENAME); ?>" />
+<style>__SITE_THEME_CSS__</style><?php endif; ?>
 </head>
 
 <body>
-<!-- 应用后台左侧导航 每个APP必须有的文件 不能删除 否则后台找不到管理菜单 -->
-<li class="treemenu_on">
-    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">小组管理</a>
-    <ul class="submenu" style="display: block;">
-    <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('group/setting');?>" target="MainIframe">小组配置</a></li>
-    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('group/manage');?>" target="MainIframe">批量管理</a></li>
-    </ul>
-</li>  
-
 <!--头部开始-->
 <header>
 <?php if($app_name == 'public' && empty($visitor) && $module_name == 'index'): ?><div class="hd-wrap">
@@ -109,45 +94,28 @@ __EXTENDS_JS__
 	</div>
         
 </div>
-<div class="midder">
-	<div class="mc">
-    	
-	<div class="boxShadow">
-  	<div class="banner"><a class="btn-release" href="#"></a><a class="btn-manage" href="#"></a></div>
-		<div class="model clearfix">
-			<ul>
-				<li class=""><a href="#"><strong>开发者风采</strong><br><p>认证开发者的展示平台</p></a></li>			
-				<li class=""><a href="#"><strong>开发文档</strong><br><p>开发相关的文档</p></a></li>
-				<li class=""><a href="#"><strong>交流论坛</strong><br><p>站长与开发者的对话</p></a></li>
-				<li class=""><a href="#"><strong>需求市场</strong><br><p>开发者与需求方的沟通桥梁</p></a></li>
-			</ul>
-		</div>
-		<!-- 
-		<div class="clearfix pb20">
-			<div class="mod-list">
-				<div class="tit"><a href="" class="fr">更多动态>></a><h3>最新动态</h3></div>
-				<ul>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-				</ul>
-			</div>
-			<div class="mod-list">
-				<div class="tit"><a href="" class="fr">更多动态>></a><h3>帮助中心</h3></div>
-				<ul>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-					<li><a href="">求天气预报插件，各位开发大牛前来围观，价格细谈</a></li>
-				</ul>
-			</div>
-		</div> -->
-	</div>
+<div style="margin:150px auto; width:350px;">
+  <img src="__STATIC__/public/images/ik_error.gif" style="float:left;">
+  <ul style="margin-left:10px; list-style-type:none; list-style-image: none; list-style-position:outside;">
+    <li style="font-size:14px; line-height: 32px; padding-left:30px"><?php echo ($message); ?></li>
+    <li style="color:#666;line-height: 10px;">&nbsp;</li>
 
-    </div>
+    <li style="color:#666;"> 
+        &gt; <span id="f3s">3</span>秒后 <a href="<?php echo ($jumpUrl); ?>">点击返回</a>
+        <script type="text/javascript">
+            (function(){
+                var secs=3,si=setInterval(function(){
+                    if(--secs){
+                        document.getElementById('f3s').innerHTML = secs;
+                    }
+                    else{
+                        location.href="<?php echo ($jumpUrl); ?>";clearInterval(si);
+                    }
+            }, 1000)})();
+        </script>
+ 	</li>
+
+  </ul>
 </div>
 <!--footer-->
 <footer>
@@ -161,7 +129,7 @@ __EXTENDS_JS__
             <a href="<?php echo U('help/about');?>">关于爱客</a>
             · <a href="<?php echo U('help/contact');?>">联系我们</a>
             · <a href="<?php echo U('help/agreement');?>">用户条款</a>
-            · <a href="<?php echo U('help/privacy');?>">隐私申明</a>
+            · <a href="<?php echo U('help/privacy);?>">隐私申明</a>
         </span>
         <div class="cl"></div>
         <p>Powered by <a class="softname" href="<?php echo (IKPHP_SITEURL); ?>"><?php echo (IKPHP_SITENAME); ?></a> <?php echo (IKPHP_VERSION); ?>  

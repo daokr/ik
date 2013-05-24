@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>成功更新小组配置

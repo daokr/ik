@@ -14,7 +14,7 @@
 <!--main-->
 <div class="midder">
 <h2><?php echo ($title); ?></h2>
-<form method="POST" action="<?php echo U('group/setting');?>">
+<form method="POST" action="<?php echo U('group/admin/setting');?>">
 <table cellpadding="0" cellspacing="0">
 
 	<tr>

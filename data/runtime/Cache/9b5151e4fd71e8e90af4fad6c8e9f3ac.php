@@ -23,29 +23,29 @@
 </div>
 <?php if($ik != 'comments'): ?><div class="tabnav">
 <ul>
-	<?php if($isaudit == 0): ?><li class="select"><a href="<?php echo U('group/manage',array('ik'=>$ik,'isaudit'=>'0'));?>">已审核的</a></li>
+	<?php if($isaudit == 0): ?><li class="select"><a href="<?php echo U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'0'));?>">已审核的</a></li>
 	<?php else: ?>
    		 <li><a href="<?php echo U('group/manage',array('ik'=>$ik,'isaudit'=>'0'));?>">已审核的</a></li><?php endif; ?>
-    <?php if($isaudit == 1): ?><li class="select"><a href="<?php echo U('group/manage',array('ik'=>$ik,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li>   
+    <?php if($isaudit == 1): ?><li class="select"><a href="<?php echo U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li>   
     <?php else: ?>
- <li><a href="<?php echo U('group/manage',array('ik'=>$ik,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li><?php endif; ?>
+ <li><a href="<?php echo U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li><?php endif; ?>
     
 </ul>
 </div><?php endif; ?>
 <div class="Toolbar_inbox">
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_delete',array('ik'=>$ik));?>" onclick="Delete(this)">
+<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_delete',array('ik'=>$ik));?>" onclick="Delete(this)">
 <span>删除选中</span>
 </a>
-<?php if($ik != 'comments'): ?><a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_audit',array('ik'=>$ik,'isaudit'=>0));?>" onclick="Audit(this)">
+<?php if($ik != 'comments'): ?><a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_audit',array('ik'=>$ik,'isaudit'=>0));?>" onclick="Audit(this)">
 <span>通过审核</span>
 </a>  
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_audit',array('ik'=>$ik,'isaudit'=>1));?>" onclick="Audit(this)">
+<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_audit',array('ik'=>$ik,'isaudit'=>1));?>" onclick="Audit(this)">
 <span>取消审核</span>
 </a><?php endif; ?>
-<?php if($ik == 'groups'): ?><a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_recommend',array('ik'=>$ik,'isrecommend'=>1));?>" onclick="Audit(this)">
+<?php if($ik == 'groups'): ?><a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_recommend',array('ik'=>$ik,'isrecommend'=>1));?>" onclick="Audit(this)">
 <span>推荐</span>
 </a>  
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_recommend',array('ik'=>$ik,'isrecommend'=>0));?>" onclick="Audit(this)">
+<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_recommend',array('ik'=>$ik,'isrecommend'=>0));?>" onclick="Audit(this)">
 <span>取消推荐</span>
 </a><?php endif; ?>   
 </div>
@@ -91,19 +91,19 @@
 <tr><?php endforeach; endif; ?>
 </table>
 <div class="Toolbar_inbox">
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_delete',array('ik'=>$ik));?>" onclick="Delete(this)">
+<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_delete',array('ik'=>$ik));?>" onclick="Delete(this)">
 <span>删除选中</span>
 </a>
-<?php if($ik != 'comments'): ?><a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_audit',array('ik'=>$ik,'isaudit'=>0));?>" onclick="Audit(this)">
+<?php if($ik != 'comments'): ?><a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_audit',array('ik'=>$ik,'isaudit'=>0));?>" onclick="Audit(this)">
 <span>通过审核</span>
 </a>  
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_audit',array('ik'=>$ik,'isaudit'=>1));?>" onclick="Audit(this)">
+<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_audit',array('ik'=>$ik,'isaudit'=>1));?>" onclick="Audit(this)">
 <span>取消审核</span>
 </a><?php endif; ?>
-<?php if($ik == 'groups'): ?><a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_recommend',array('ik'=>$ik,'isrecommend'=>1));?>" onclick="Audit(this)">
+<?php if($ik == 'groups'): ?><a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_recommend',array('ik'=>$ik,'isrecommend'=>1));?>" onclick="Audit(this)">
 <span>推荐</span>
 </a>  
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/ajax_recommend',array('ik'=>$ik,'isrecommend'=>0));?>" onclick="Audit(this)">
+<a class="btn_a" href="javascript:;" data-url="<?php echo U('group/admin/ajax_recommend',array('ik'=>$ik,'isrecommend'=>0));?>" onclick="Audit(this)">
 <span>取消推荐</span>
 </a><?php endif; ?>   
 </div>

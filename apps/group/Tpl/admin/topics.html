@@ -25,7 +25,7 @@
 <tr class="odd">
 <td><input type="checkbox" value="{$item[topicid]}" name="itemid"></td>
 <td>{$item[topicid]}</td>
-<td><a href="index.php?m=group&a=topic&id={$item[topicid]}" target="_blank">{$item[title]}</a></td>
+<td><a href="index.php?app=group&m=index&a=topic&id={$item[topicid]}" target="_blank">{$item[title]}</a></td>
 <td>{$item[user][username]}</td>
 <td>{$item[count_comment]}</td>
 <td>{$item[count_view]}</td>
@@ -39,11 +39,11 @@
 </if>
 </td>
 <td>
-<a href="{:U('group/delete',array('ik'=>'topic','id'=>$item[topicid],'isaudit'=>$isaudit))}">[删除]</a> &nbsp;&nbsp;
+<a href="{:U('group/admin/delete',array('ik'=>'topic','id'=>$item[topicid],'isaudit'=>$isaudit))}">[删除]</a> &nbsp;&nbsp;
 <if condition="$item[isaudit] eq 0">
-<a href="{:U('group/isaudit',array('ik'=>'topic','id'=>$item[topicid],'isaudit'=>'1'))}">[取消审核]</a> 
+<a href="{:U('group/admin/isaudit',array('ik'=>'topic','id'=>$item[topicid],'isaudit'=>'1'))}">[取消审核]</a> 
 <else/>
-<a href="{:U('group/isaudit',array('ik'=>'topic','id'=>$item[topicid],'isaudit'=>'0'))}">[通过审核]</a> 
+<a href="{:U('group/admin/isaudit',array('ik'=>'topic','id'=>$item[topicid],'isaudit'=>'0'))}">[通过审核]</a> 
 </if>
 </td>
 <tr>

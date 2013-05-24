@@ -20,7 +20,7 @@ class adminAction extends backendAction {
 				$this->group_setting->where(array('name' => $key))->save(array('data' => $val));
 			}
 			F('group_setting', NULL);//后台有更新 清楚前台缓存
-			$this->success(L('operation_success'));
+			$this->success('成功更新小组配置');
 		}else{
 			$this->title ( '小组配置' );
 			$this->display();
@@ -29,9 +29,9 @@ class adminAction extends backendAction {
 	public function manage(){
 		$ik = $this->_get ( 'ik', 'trim','groups');
 		$menu = array(
-				'groups' => array('text'=>'全部小组', 'url'=>U('group/manage',array('ik'=>'groups'))),
-				'topics' => array('text'=>'帖子管理', 'url'=>U('group/manage',array('ik'=>'topics'))),
-				'comments' => array('text'=>'帖子评论管理', 'url'=>U('group/manage',array('ik'=>'comments'))),
+				'groups' => array('text'=>'全部小组', 'url'=>U('group/admin/manage',array('ik'=>'groups'))),
+				'topics' => array('text'=>'帖子管理', 'url'=>U('group/admin/manage',array('ik'=>'topics'))),
+				'comments' => array('text'=>'帖子评论管理', 'url'=>U('group/admin/manage',array('ik'=>'comments'))),
 		);
 		
 		$this->assign('menu', $menu);
