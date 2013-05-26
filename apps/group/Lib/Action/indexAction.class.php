@@ -7,15 +7,8 @@ class indexAction extends frontendAction {
 	
 	public function _initialize() {
 		parent::_initialize ();
-		//初始化小组配置
-		if (false === $group_setting = F('group_setting')) {
-			$res = M('group_setting')->getField('name,data');
-			foreach ($res as $key=>$val) {
-				$group_setting['ik_'.$key] = unserialize($val) ? unserialize($val) : $val;
-			}
-			F('group_setting',$group_setting);//写缓存
-		}
-		C($group_setting);
+		//读取配置
+		$this->fcache('group_setting');
 		// 访问者控制
 		if (! $this->visitor->is_login && in_array ( ACTION_NAME, array (
 				'add',
@@ -534,7 +527,7 @@ class indexAction extends frontendAction {
 				$author = array('isauthor'=>1,'text'=>'只看楼主');
 			}
 			//显示列表
-			$pagesize = 30;
+			$pagesize = 3;
 			$count = $this->group_topics_comments->where($map)->order('addtime '.$sc)->count('topicid');
 			$pager = $this->_pager($count, $pagesize);
 			$arrComment =  $this->group_topics_comments->where($map)->order('addtime '.$sc)->limit($pager->firstRow.','.$pager->listRows)->select();

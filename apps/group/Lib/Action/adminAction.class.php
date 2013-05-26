@@ -6,6 +6,8 @@
 class adminAction extends backendAction {
 	public function _initialize() {
 		parent::_initialize ();
+		//读取配置
+		$this->fcache('group_setting');
 		$this->mod = D ( 'group' );
 		$this->group_setting = M ( 'group_setting' );
 		$this->user_mod = D ( 'user' );
@@ -17,6 +19,7 @@ class adminAction extends backendAction {
 			$setting = $this->_post('setting', ',');
 			foreach ($setting as $key => $val) {
 				$val = is_array($val) ? serialize($val) : $val;
+				
 				$this->group_setting->where(array('name' => $key))->save(array('data' => $val));
 			}
 			F('group_setting', NULL);//后台有更新 清楚前台缓存
@@ -59,7 +62,7 @@ class adminAction extends backendAction {
 				case "group" :
 					//删除小组
 					if(D('group')->delGroup($id)){
-						$this->redirect('group/manage',array('ik'=>'groups','isaudit'=>$isaudit));
+						$this->redirect('group/admin/manage',array('ik'=>'groups','isaudit'=>$isaudit));
 					}else{
 						$this->error('删除失败');
 					}
@@ -67,7 +70,7 @@ class adminAction extends backendAction {
 				case "topic" :
 					//删除话题
 					if(D('group_topics')->delTopic($id)){
-						$this->redirect('group/manage',array('ik'=>'topics','isaudit'=>$isaudit));
+						$this->redirect('group/admin/manage',array('ik'=>'topics','isaudit'=>$isaudit));
 					}else{
 						$this->error('删除失败');
 					}
@@ -75,7 +78,7 @@ class adminAction extends backendAction {
 				case "comment" :
 					$status = D('group_topics')->delComment($id);
 					if($status){
-						$this->redirect('group/manage',array('ik'=>'comments'));
+						$this->redirect('group/admin/manage',array('ik'=>'comments'));
 					}else{
 						$this->error('删除失败');
 					}
@@ -161,12 +164,12 @@ class adminAction extends backendAction {
     		case "group" :
     			$this->mod->where(array('groupid'=>$id))->setField(array('isaudit'=>$isaudit));
     			$isaudit = $isaudit == 0? 1 : 0;
-    			$this->redirect ( 'group/manage',array('ik'=>'groups','isaudit'=>$isaudit));
+    			$this->redirect ( 'group/admin/manage',array('ik'=>'groups','isaudit'=>$isaudit));
     			break;
     		case "topic" :
     			$this->topics_mod->where(array('topicid'=>$id))->setField(array('isaudit'=>$isaudit));
     			$isaudit = $isaudit == 0? 1 : 0;
-    			$this->redirect ( 'group/manage',array('ik'=>'topics','isaudit'=>$isaudit));
+    			$this->redirect ( 'group/admin/manage',array('ik'=>'topics','isaudit'=>$isaudit));
     			break;
     	}
     	

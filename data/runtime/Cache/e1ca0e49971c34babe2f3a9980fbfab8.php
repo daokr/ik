@@ -100,24 +100,113 @@ __EXTENDS_JS__
 	</div>
         
 </div>
-
 <div class="midder">
-<div class="mc">
-<h1><?php echo ($seo["title"]); ?></h1>
-<div class="cleft">
-<div class="infocontent"><?php echo ($strInfo[infocontent]); ?></div>
-</div>
 
-<div class="cright"><div class="infomenu">
-<ul>
-<?php if(is_array($arrMenu)): $i = 0; $__LIST__ = $arrMenu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i; if($key == $infokey): ?><li class="select"><a href="<?php echo ($item[url]); ?>"><?php echo ($item[text]); ?></a></li>
-    <?php else: ?>
-    <li><a href="<?php echo ($item[url]); ?>"><?php echo ($item[text]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-</ul>
-</div></div>
-</div>
-</div>
 
+    <div class="mc">
+    
+        <div id="group-info">
+            <h1 class="group_tit"><?php echo ($seo["title"]); ?></h1>
+            <div class="group-misc">
+                    <a href="javascript:;" class="button-join" rel="nofollow" onClick="$('#select-bar').show()">
+                        <span>+我要发言</span>
+                    </a>
+                    <div id="select-bar" style="display:none" onmouseleave="$('#select-bar').hide()">
+                    	<h3>选择小组：</h3>
+                        <ul>
+                        	<?php if($myGroups): if(is_array($myGroups)): foreach($myGroups as $key=>$item): ?><li><a href="<?php echo U('group/index/add',array('id'=>$item[groupid]));?>"><?php echo ($item[groupname]); ?></a></li><?php endforeach; endif; ?>
+                             <?php else: ?>
+                            <li>你还没有加入任何小组， <a href="<?php echo U('group/index/create');?>">+申请创建小组</a>&nbsp;&nbsp;&nbsp;<a href="<?php echo U('group/index/explore');?>">发现小组&gt;&gt;</a></li><?php endif; ?>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+            
+        <div class="cleft w700">
+
+
+            <div class="group_topics">
+                <table class="olt">
+                    <tbody>
+            <?php if(!empty($arrTopic)): if(is_array($arrTopic)): foreach($arrTopic as $key=>$item): ?><tr class="pl">
+               <td class="td-subject"><a title="<?php echo ($item[title]); ?>" href="<?php echo U('group/index/topic',array('id'=>$item[topicid]));?>"><?php echo getsubstrutf8(t($item['title']),0,25); ?></a>
+                <?php if($item[isvideo] == 1): ?><img src="__STATIC__/public/images/lc_cinema.png" align="absmiddle" title="[视频]" alt="[视频]" /><?php endif; ?>                
+                <?php if($item[istop] == 1): ?><img src="__STATIC__/public/images/headtopic_1.gif" title="[置顶]" alt="[置顶]" /><?php endif; ?>
+                <?php if($item[addtime] > (strtotime(date('Y-m-d 00:00:00')))): ?><img src="__STATIC__/public/images/topic_new.gif" align="absmiddle"  title="[新帖]" alt="[新帖]" /><?php endif; ?> 
+                <?php if($item[isphoto] == 1): ?><img src="__STATIC__/public/images/image_s.gif" title="[图片]" alt="[图片]" align="absmiddle" /><?php endif; ?> 
+                <?php if($item[isattach] == 1): ?><img src="__STATIC__/public/images/attach.gif" title="[附件]" alt="[附件]" /><?php endif; ?> 
+                <?php if($item[isdigest] == 1): ?><img src="__STATIC__/public/images/posts.gif" title="[精华]" alt="[精华]" /><?php endif; ?>
+                </td>
+                <td class="td-reply" nowrap="nowrap"><?php if($item[count_comment] > 0): echo ($item[count_comment]); ?> 回应<?php endif; ?></td>
+                <td class="td-time" nowrap="nowrap"><?php echo getTime($item[uptime],time()); ?></td>
+                <td align="right"><a href="<?php echo U('group/index/show',array('id'=>$item[groupid]));?>"><?php echo getsubstrutf8(t($item[group][groupname]),0,10); ?></a></td>
+                </tr><?php endforeach; endif; endif; ?>         
+                </tbody>
+              </table>
+            </div>
+            
+             
+            
+            <div class="clear"></div>
+    
+    
+    	</div>
+    
+        <div class="cright w250" id="cright">   
+              
+			<div class="mod" id="g-user-profile">
+
+    <div class="usercard">
+      <div class="pic">
+            <a href="<?php echo U('space/index/index',array('id'=>$strUser[doname]));?>"><img alt="<?php echo ($strUser[username]); ?>" src="<?php echo ($strUser[face]); ?>"></a>
+      </div>
+      <div class="info">
+           <div class="name">
+               <a href="<?php echo U('space/index/index',array('id'=>$strUser[doname]));?>"><?php echo ($strUser[username]); ?></a>
+           </div>
+                <?php if($strUser[area] != ''): echo ($strUser[area][areaname]); else: ?>火星<?php endif; ?>                        
+                 <br>
+       </div>
+    </div>
+               
+    <div class="group-nav">
+     <ul>
+		<?php if($action_name == 'my_group_topics'): ?><li class="on"><a href="<?php echo U('group/index/my_group_topics');?>">我的小组话题</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/index/my_group_topics');?>">我的小组话题</a></li><?php endif; ?>
+        
+		<?php if($action_name == 'my_topics'): ?><li class="on"><a href="<?php echo U('group/index/my_topics');?>">我发起的话题</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/index/my_topics');?>">我发起的话题</a></li><?php endif; ?>
+        		
+		<?php if($action_name == 'my_replied_topics'): ?><li class="on"><a href="<?php echo U('group/index/my_replied_topics');?>">我回应的话题</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/index/my_replied_topics');?>">我回应的话题</a></li><?php endif; ?>
+		
+		<?php if($action_name == 'my_collect_topics'): ?><li class="on"><a href="<?php echo U('group/index/my_collect_topics');?>">我喜欢的话题</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/index/my_collect_topics');?>">我喜欢的话题</a></li><?php endif; ?>
+		
+		<?php if($action_name == 'mine'): ?><li class="on"><a href="<?php echo U('group/index/mine');?>">我管理/加入的小组</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/index/mine');?>">我管理/加入的小组</a></li><?php endif; ?>
+     </ul>
+    </div>
+             
+</div> 
+         
+<div class="mod">
+<?php if($visitor): ?><div class="create-group">
+<a href="<?php echo U('group/index/create');?>"><i>+</i>申请创建小组</a>
+</div><?php endif; ?>
+</div>                 
+        
+        </div>
+    
+    </div><!--//mc-->
+
+
+</div>                
 <!--footer-->
 <footer>
 <div id="footer">

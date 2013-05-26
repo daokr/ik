@@ -173,11 +173,18 @@ class Page {
                 if(empty($_GET)) {
                     $parameter  =   array();
                 }else{
-                    $parameter  =   $_GET;
+                    $parameter  =   $_GET; 
                 }
             }
-            $parameter[$p]  =   '__PAGE__';
-            $url            =   U($this->path, $parameter);
+            //修改分页参数 小麦
+            foreach ($parameter as $key=>$v){
+            	if($key == 'app'){
+            		 $para= array_slice($parameter, 1);
+            	}
+            }
+            $parameter = $para;
+            $parameter[$p]  =   '__PAGE__'; 
+            $url            =   U($this->path, $parameter); 
         }
         //上下翻页字符串
         $upRow          =   $this->nowPage-1;

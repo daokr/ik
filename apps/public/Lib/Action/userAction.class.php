@@ -318,9 +318,9 @@ class userAction extends userbaseAction {
 			if ($password != $repassword) {
 				$this->error ( L ( 'inconsistent_password' ) ); // 确认密码
 			}
-			if (session ( 'authcode' ) != strtoupper ( $captcha )) {
+			/*if (session ( 'authcode' ) != strtoupper ( $captcha )) {
 				$this->error ( L ( 'captcha_failed' ) );
-			}
+			}*/
 			// 连接用户中心
 			$passport = $this->_user_server ();
 			// 注册

@@ -14,7 +14,6 @@ class baseAction extends Action
             $setting = D('setting')->setting_cache();
         }
         C($setting);
-
         //当前app名称
         $this->assign('app_name',strtolower(TRUE_APPNAME));
         //当前model名称
@@ -78,6 +77,17 @@ class baseAction extends Action
             $this->error('呃...你想访问的页面不存在');
             exit;
         }
+    }
+    //新增一个写缓存的方法
+    protected function fcache($filename){
+    	if (!empty($filename) && false === $setting = F($filename)) {
+			$res = M($filename)->getField('name,data');
+			foreach ($res as $key=>$val) {
+				$setting['ik_'.$key] = unserialize($val) ? unserialize($val) : $val;
+			}
+			F($filename,$setting);//写缓存
+		}
+			C(F($filename));//读缓存配置
     }
  
 }

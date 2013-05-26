@@ -30,15 +30,17 @@ check_gpc($_GET);
 check_gpc($_POST);
 //check_gpc($_COOKIE);
 
+//ikphp专用处理url路由
+ikreurl ();
+
 //解析关键参数 todo:参数过滤 preg_match("/^([a-zA-Z_\/0-9]+)$/i", $ik, $url);
 $_REQUEST	=	array_merge($_GET,$_POST);
-
 if(isset($_REQUEST['os']) && !isset($_REQUEST['app'])){
 	$ik['_os']  = $_REQUEST['os'];
 }else{
-	$ik['_app'] = isset($_REQUEST['app']) && !empty($_REQUEST['app'])?$_REQUEST['app']:'public';
-	$ik['_mod'] = isset($_REQUEST['m']) && !empty($_REQUEST['m'])?$_REQUEST['m']:'index';
-	$ik['_act'] = isset($_REQUEST['a']) && !empty($_REQUEST['a'])?$_REQUEST['a']:'index';
+	$ik['_app'] =  isset($_REQUEST['app']) && !empty($_REQUEST['app'])?$_REQUEST['app']:'public';
+	$ik['_mod'] =  isset($_REQUEST['m']) && !empty($_REQUEST['m'])?$_REQUEST['m']:'index';
+	$ik['_act'] =  isset($_REQUEST['a']) && !empty($_REQUEST['a'])?$_REQUEST['a']:'index';
 }
 
 $ik['_widget_appname'] = isset($_REQUEST['widget_appname']) && !empty($_REQUEST['widget_appname'])  ? $_REQUEST['widget_appname'] :'';

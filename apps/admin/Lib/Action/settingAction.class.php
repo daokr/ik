@@ -28,7 +28,7 @@ class settingAction extends backendAction {
 					'URL_MODEL' => $url_model
 			);
 			if ($this->update_config($new_config, $config_file)) {
-				$this->success(L('operation_success'));
+				$this->success(L('operation_success'),U('admin/setting/url'));
 			} else {
 				$this->error(L('operation_failure'));
 			}

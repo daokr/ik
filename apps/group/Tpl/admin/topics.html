@@ -25,7 +25,7 @@
 <tr class="odd">
 <td><input type="checkbox" value="{$item[topicid]}" name="itemid"></td>
 <td>{$item[topicid]}</td>
-<td><a href="index.php?app=group&m=index&a=topic&id={$item[topicid]}" target="_blank">{$item[title]}</a></td>
+<td><a href="{:U('group/index/topic',array('id'=>$item[topicid]))}" target="_blank">{$item[title]}</a></td>
 <td>{$item[user][username]}</td>
 <td>{$item[count_comment]}</td>
 <td>{$item[count_view]}</td>

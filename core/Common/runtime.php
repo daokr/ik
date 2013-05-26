@@ -22,9 +22,6 @@ define('IS_CGI',substr(PHP_SAPI, 0,3)=='cgi' ? 1 : 0 );
 define('IS_WIN',strstr(PHP_OS, 'WIN') ? 1 : 0 );
 define('IS_CLI',PHP_SAPI=='cli'? 1   :   0);
 
-// 项目名称
-defined('APP_NAME') or define('APP_NAME', basename(dirname($_SERVER['SCRIPT_FILENAME'])));
-
 if(!IS_CLI) { 
     // 当前文件名
     if(!defined('_PHP_FILE_')) {
@@ -55,7 +52,7 @@ if(!IS_CLI) {
 
 //基本常量定义
 define('SITE_DOMAIN'	,	strip_tags($_SERVER['HTTP_HOST']));
-define('SITE_URL'		,	(IS_HTTPS?'https:':'http:').'//'.SITE_DOMAIN.__ROOT__);
+define('SITE_URL'		,	'http://'.SITE_DOMAIN.__ROOT__);
 
 //判断项目app是否存在
 if(!is_dir(LIB_PATH) && TRUE_APPNAME!='public'){

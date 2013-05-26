@@ -218,7 +218,7 @@ function U($url='',$vars='',$suffix=true,$redirect=false,$domain=false) {
             $path       =   explode($depr,$url);
             $var        =   array();
             //修改人小麦 2013-5-21 增加app参数
-            
+                                 
             $var[C('VAR_ACTION')]       =   !empty($path)?array_pop($path):ACTION_NAME; 
             $var[C('VAR_MODULE')]       =   !empty($path)?array_pop($path):MODULE_NAME;
             $var[C('VAR_APPNAME')] 		=   !empty($path)?array_pop($path):APP_NAME;
@@ -262,11 +262,13 @@ function U($url='',$vars='',$suffix=true,$redirect=false,$domain=false) {
             $url   .=   '&'.$vars;
         }
     }else{ // PATHINFO模式或者兼容URL模式
+    	
         if(isset($route)) {
             $url    =   __APP__.'/'.rtrim($url,$depr);
         }else{
             $url    =   __APP__.'/'.implode($depr,array_reverse($var));
         }
+        
         if(!empty($vars)) { // 添加参数
             foreach ($vars as $var => $val){
                 if('' !== trim($val))   $url .= $depr . $var . $depr . urlencode($val);
@@ -282,12 +284,14 @@ function U($url='',$vars='',$suffix=true,$redirect=false,$domain=false) {
             }
         }
     }
+        
     if(isset($anchor)){
         $url  .= '#'.$anchor;
     }
     if($domain) {
         $url   =  (is_ssl()?'https://':'http://').$domain.$url;
     }
+   
     //修改人 小麦 2013-4-8 IKPHP专用
     if(C('URL_ROUTER_ON') && C('URL_MODEL')!=0 && is_array(C('URL_IKPHP_RULES'))){
     	//显示页

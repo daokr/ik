@@ -24,8 +24,8 @@ class Dispatcher {
      * @access public
      * @return void
      */
-    static public function dispatch() {
-        $urlMode  =  C('URL_MODEL');
+    static public function dispatch() { 
+        $urlMode  =  C('URL_MODEL'); 
         if(!empty($_GET[C('VAR_PATHINFO')])) { // 判断URL里面是否有兼容模式参数
             $_SERVER['PATH_INFO']   = $_GET[C('VAR_PATHINFO')];
             unset($_GET[C('VAR_PATHINFO')]);
@@ -33,13 +33,13 @@ class Dispatcher {
         if($urlMode == URL_COMPAT ){
             // 兼容模式判断
             define('PHP_FILE',_PHP_FILE_.'?'.C('VAR_PATHINFO').'=');
-        }elseif($urlMode == URL_REWRITE ) {
+        }elseif($urlMode == URL_REWRITE ) { 
             //当前项目地址
             $url    =   dirname(_PHP_FILE_);
             if($url == '/' || $url == '\\')
                 $url    =   '';
             define('PHP_FILE',$url);
-        }else {
+        }else { 
             //当前项目地址
             define('PHP_FILE',_PHP_FILE_);
         }
@@ -76,7 +76,7 @@ class Dispatcher {
         }
         // 分析PATHINFO信息
         if(empty($_SERVER['PATH_INFO'])) {
-            $types   =  explode(',',C('URL_PATHINFO_FETCH'));
+            $types   =  explode(',',C('URL_PATHINFO_FETCH')); 
             foreach ($types as $type){
                 if(0===strpos($type,':')) {// 支持函数判断
                     $_SERVER['PATH_INFO'] =   call_user_func(substr($type,1));
@@ -89,17 +89,19 @@ class Dispatcher {
             }
         }
         $depr = C('URL_PATHINFO_DEPR');
-        if(!empty($_SERVER['PATH_INFO'])) {
+        if(!empty($_SERVER['PATH_INFO'])) { 
             tag('path_info');
-            $part =  pathinfo($_SERVER['PATH_INFO']);
+            $part =  pathinfo($_SERVER['PATH_INFO']); 
             define('__EXT__', isset($part['extension'])?strtolower($part['extension']):'');
             if(C('URL_HTML_SUFFIX')) {
                 $_SERVER['PATH_INFO'] = preg_replace('/\.('.trim(C('URL_HTML_SUFFIX'),'.').')$/i', '', $_SERVER['PATH_INFO']);
             }elseif(__EXT__) {
                 $_SERVER['PATH_INFO'] = preg_replace('/.'.__EXT__.'$/i','',$_SERVER['PATH_INFO']);
             }
-            if(!self::routerCheck()){   // 检测路由规则 如果没有则按默认规则调度URL
-                $paths = explode($depr,trim($_SERVER['PATH_INFO'],'/'));
+            
+            if(!self::routerCheck()){   // 检测路由规则 如果没有则按默认规则调度URL     
+                $paths = explode($depr,trim($_SERVER['PATH_INFO'],'/'));   
+                
                 if(C('VAR_URL_PARAMS')) {
                     // 直接通过$_GET['_URL_'][1] $_GET['_URL_'][2] 获取URL参数 方便不用路由时参数获取
                     $_GET[C('VAR_URL_PARAMS')]   =  $paths;
@@ -120,16 +122,16 @@ class Dispatcher {
                 preg_replace('@(\w+)\/([^\/]+)@e', '$var[\'\\1\']=strip_tags(\'\\2\');', implode('/',$paths));
                 $_GET   =  array_merge($var,$_GET);
             }
-            define('__INFO__',$_SERVER['PATH_INFO']);
+            define('__INFO__',$_SERVER['PATH_INFO']);      
         }
 
         // URL常量
-        define('__SELF__',strip_tags($_SERVER['REQUEST_URI']));
+        define('__SELF__',strip_tags($_SERVER['REQUEST_URI']));    
         // 当前项目地址
-        define('__APP__',strip_tags(PHP_FILE));
+        define('__APP__',strip_tags(PHP_FILE)); 
 
         // 获取分组 模块和操作名称
-        if (C('APP_GROUP_LIST')) {
+        if (C('APP_GROUP_LIST')) { 
             define('GROUP_NAME', self::getGroup(C('VAR_GROUP'))); 
             // 分组URL地址
             define('__GROUP__',(!empty($domainGroup) || strtolower(GROUP_NAME) == strtolower(C('DEFAULT_GROUP')) )?__APP__ : __APP__.'/'.GROUP_NAME);
@@ -137,6 +139,7 @@ class Dispatcher {
         
         // 定义项目基础加载路径
         define('BASE_LIB_PATH', (defined('GROUP_NAME') && C('APP_GROUP_MODE')==1) ? APP_PATH.C('APP_GROUP_PATH').'/'.GROUP_NAME.'/' : LIB_PATH);
+       
         if(defined('GROUP_NAME')) {
             if(1 == C('APP_GROUP_MODE')){ // 独立分组模式
                 $config_path    =   BASE_LIB_PATH.'Conf/';
@@ -156,20 +159,21 @@ class Dispatcher {
                 include $common_path.'function.php';
 
         }        
-        define('MODULE_NAME',self::getModule(C('VAR_MODULE')));
-        define('ACTION_NAME',self::getAction(C('VAR_ACTION')));
+        define('MODULE_NAME',strtolower(self::getModule(C('VAR_MODULE'))));   
+        define('ACTION_NAME',self::getAction(C('VAR_ACTION'))); 
         
         // 当前模块和分组地址
-        $moduleName    =   defined('MODULE_ALIAS')?MODULE_ALIAS:MODULE_NAME;
+        $moduleName    =   defined('MODULE_ALIAS')?MODULE_ALIAS:MODULE_NAME; 
         if(defined('GROUP_NAME')) {
             define('__URL__',!empty($domainModule)?__GROUP__.$depr : __GROUP__.$depr.$moduleName);
         }else{
             define('__URL__',!empty($domainModule)?__APP__.'/' : __APP__.'/'.$moduleName);
         }
         // 当前操作地址
-        define('__ACTION__',__URL__.$depr.(defined('ACTION_ALIAS')?ACTION_ALIAS:ACTION_NAME));
+        define('__ACTION__',__URL__.$depr.(defined('ACTION_ALIAS')?ACTION_ALIAS:ACTION_NAME)); 
         //保证$_REQUEST正常取值
         $_REQUEST = array_merge($_POST,$_GET);
+
     }
 
     /**
@@ -190,7 +194,7 @@ class Dispatcher {
      * @return string
      */
     static private function getModule($var) {
-        $module = (!empty($_GET[$var])? $_GET[$var]:C('DEFAULT_MODULE'));
+        $module = (!empty($_GET[$var])? $_GET[$var]:C('DEFAULT_MODULE')); 
         unset($_GET[$var]);
         if($maps = C('URL_MODULE_MAP')) {
             if(isset($maps[strtolower($module)])) {

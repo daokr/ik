@@ -1,5 +1,6 @@
 <include file="__PUBLICHTML__:header" />
 <!--header-->
+<if condition="$app_name eq 'public' && empty($visitor) && $module_name neq 'index'">
 <div id="header">
     
 	<div class="site_nav">
@@ -24,3 +25,4 @@
 	</div>
         
 </div>
+</if>

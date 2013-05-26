@@ -23,6 +23,19 @@ class indexAction extends frontendAction {
 		$this->item_mod = M ( 'article_item' );
 		$this->channel_mod = D ( 'article_channel' );
 		$this->user_mod = D ( 'user' );
+		//生成导航
+		$this->assign('arrNav',$this->_nav());
+	}
+	protected  function _nav(){
+		// 文章导航
+	    $arrChannel = D('article_channel')->getAllChannel(array('isnav'=>'0'));
+	    foreach($arrChannel as $item){
+	    	$arrNav[$item['nameid']] = array('name'=>$item['name'], 'url'=>U('article/index/channel',array('nameid'=>$item['nameid'])));
+	    }
+	    if($this->visitor->info['userid']){
+	    	$arrNav['my_article'] = array('name'=>'我的文章', 'url'=>U('article/index/my_article'));
+	    }
+		return $arrNav;
 	}
 	// 文章
 	public function index() {
@@ -93,11 +106,11 @@ class indexAction extends frontendAction {
 			$data ['newsfromurl'] = $this->_post ( 'newsfromurl', 'trim', '' );	
 			
 			//安全性判断
-			if(empty($item ['title']) || empty($item ['cateid']) || empty($item ['content'])){
+			if(empty($item ['title']) || empty($item ['cateid']) || empty($data ['content'])){
 				$this->error('标题、分类、内容都必须填写！');
 			}elseif (mb_strlen($item ['title'],'utf8')>50){
 				$this->error('标题太长了！');
-			}elseif (mb_strlen($item ['content'],'utf8')>20000){
+			}elseif (mb_strlen($data ['content'],'utf8')>20000){
 				$this->error('文章内容太长了！');
 			}
 				

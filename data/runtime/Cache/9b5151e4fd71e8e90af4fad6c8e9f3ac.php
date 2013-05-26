@@ -25,7 +25,7 @@
 <ul>
 	<?php if($isaudit == 0): ?><li class="select"><a href="<?php echo U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'0'));?>">已审核的</a></li>
 	<?php else: ?>
-   		 <li><a href="<?php echo U('group/manage',array('ik'=>$ik,'isaudit'=>'0'));?>">已审核的</a></li><?php endif; ?>
+   		 <li><a href="<?php echo U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'0'));?>">已审核的</a></li><?php endif; ?>
     <?php if($isaudit == 1): ?><li class="select"><a href="<?php echo U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li>   
     <?php else: ?>
  <li><a href="<?php echo U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li><?php endif; ?>
@@ -66,7 +66,7 @@
 <?php if(is_array($list)): foreach($list as $key=>$item): ?><tr class="odd">
 <td><input type="checkbox" value="<?php echo ($item[groupid]); ?>" name="itemid"></td>
 <td><?php echo ($item[groupid]); ?></td>
-<td><a href="index.php?m=group&a=show&id=<?php echo ($item[groupid]); ?>" target="_blank"><?php echo ($item[groupname]); ?></a></td>
+<td><a href="<?php echo U('group/index/show',array('id'=>$item[groupid]));?>" target="_blank"><?php echo ($item[groupname]); ?></a></td>
 <td><?php echo ($item[groupdesc]); ?></td>
 <td><?php echo ($item[user][username]); ?></td>
 <td><?php echo ($item[count_topic]); ?></td>
@@ -83,10 +83,10 @@
 未审核<?php endif; ?>
 </td>
 <td>
-<a href="<?php echo U('group/delete',array('ik'=>'group','id'=>$item[groupid],'isaudit'=>$isaudit));?>">[删除]</a> &nbsp;&nbsp;
-<?php if($item[isaudit] == 0): ?><a href="<?php echo U('group/isaudit',array('ik'=>'group','id'=>$item[groupid],'isaudit'=>'1'));?>">[取消审核]</a> 
+<a href="<?php echo U('group/admin/delete',array('ik'=>'group','id'=>$item[groupid],'isaudit'=>$isaudit));?>">[删除]</a> &nbsp;&nbsp;
+<?php if($item[isaudit] == 0): ?><a href="<?php echo U('group/admin/isaudit',array('ik'=>'group','id'=>$item[groupid],'isaudit'=>'1'));?>">[取消审核]</a> 
 <?php else: ?>
-<a href="<?php echo U('group/isaudit',array('ik'=>'group','id'=>$item[groupid],'isaudit'=>'0'));?>">[通过审核]</a><?php endif; ?>
+<a href="<?php echo U('group/admin/isaudit',array('ik'=>'group','id'=>$item[groupid],'isaudit'=>'0'));?>">[通过审核]</a><?php endif; ?>
 </td>
 <tr><?php endforeach; endif; ?>
 </table>

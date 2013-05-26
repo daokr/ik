@@ -16,7 +16,7 @@
 	<if condition="$isaudit eq 0">
    		 <li class="select"><a href="{:U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'0'))}">已审核的</a></li>
 	<else/>
-   		 <li><a href="{:U('group/manage',array('ik'=>$ik,'isaudit'=>'0'))}">已审核的</a></li>
+   		 <li><a href="{:U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'0'))}">已审核的</a></li>
     </if>
     <if condition="$isaudit eq 1">
  <li class="select"><a href="{:U('group/admin/manage',array('ik'=>$ik,'isaudit'=>'1'))}">未审核的 <font style="color:red;">({$count_isaudit})</font></a></li>   

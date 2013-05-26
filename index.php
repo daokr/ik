@@ -12,7 +12,6 @@ if (!is_file('./data/install.lock')) {
 	header('Location: ./install.php');
 	exit;
 }
-
 //网站根路径设置
 define('SITE_PATH', dirname(__FILE__));
 
@@ -32,5 +31,7 @@ define('RUNTIME_PATH', IK_DATA_PATH . 'runtime/');
 /* DEBUG开关*/
 define('APP_DEBUG', true); //调试时候打开 部署时候关闭
 
+//加载基础函数
+require_once IK_EXTEND_PATH.'function/IKFunction.php';
 //载入核心文件
 require("./core/core.php");

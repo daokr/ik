@@ -84,7 +84,7 @@ function refresh() {
 <div class="header">
     <div class="logo"><a href="<?php echo U('admin/index/index');?>" >&nbsp;</a></div>
     <div class="nav_sub">
-       您好，<?php echo ($admin["username"]); ?> &nbsp; | <a href="./" target="_blank">返回前台</a> | 
+       您好，<?php echo ($admin["username"]); ?> &nbsp; | <a href="<?php echo C('ik_site_url');?>" target="_blank">返回前台</a> | 
        <a href="javascript:void(0);" onclick="refresh();">刷新</a> | 
        <a href="javascript:void(0);" id="J_flush_cache" hidefocus="true" data-uri="<?php echo U('admin/cache/qclear');?>" title="更新缓存">清除缓存</a> | 
        <a href="<?php echo U('admin/index/logout');?>">[退出]</a><br>    

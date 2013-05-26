@@ -28,20 +28,23 @@ class CheckRouteBehavior extends Behavior {
     public function run(&$return){
         // 优先检测是否存在PATH_INFO
         $regx = trim($_SERVER['PATH_INFO'],'/');
-        if(empty($regx)) return $return = true;
+        if(empty($regx)) return $return = true; 
         // 是否开启路由使用
         if(!C('URL_ROUTER_ON')) return $return = false;
         // 路由定义文件优先于config中的配置定义
-        $routes = C('URL_ROUTE_RULES');
+        $routes = C('URL_ROUTE_RULES'); 
+      
         // 路由处理
-        if(!empty($routes)) {
-            $depr = C('URL_PATHINFO_DEPR');
+        if(!empty($routes)) {  
+            $depr = C('URL_PATHINFO_DEPR'); 
             // 分隔符替换 确保路由定义使用统一的分隔符
             $regx = str_replace($depr,'/',$regx);
-            foreach ($routes as $rule=>$route){
+            foreach ($routes as $rule=>$route){        	
                 if(0===strpos($rule,'/') && preg_match($rule,$regx,$matches)) { // 正则路由
+                	
                     return $return = $this->parseRegex($matches,$route,$regx);
                 }else{ // 规则路由
+                	  
                     $len1   =   substr_count($regx,'/');
                     $len2   =   substr_count($rule,'/');
                     if($len1>=$len2) {
@@ -91,9 +94,10 @@ class CheckRouteBehavior extends Behavior {
 
     // 解析规范的路由地址
     // 地址格式 [分组/模块/操作?]参数1=值1&参数2=值2...
-    private function parseUrl($url) {
+    private function parseUrl($url) { 
         $var  =  array();
         if(false !== strpos($url,'?')) { // [分组/模块/操作?]参数1=值1&参数2=值2...
+        	
             $info   =  parse_url($url);
             $path   = explode('/',$info['path']);
             parse_str($info['query'],$var);
@@ -102,15 +106,18 @@ class CheckRouteBehavior extends Behavior {
         }else{ // 参数1=值1&参数2=值2...
             parse_str($url,$var);
         }
-        if(isset($path)) {
+        //开始标配URl 修改人小麦
+        if(isset($path)) {  
             $var[C('VAR_ACTION')] = array_pop($path);
             if(!empty($path)) {
-                $var[C('VAR_MODULE')] = array_pop($path);
+                $var[C('VAR_MODULE')] = array_pop($path);  
             }
-            if(!empty($path)) {
-                $var[C('VAR_GROUP')]  = array_pop($path);
+            if(!empty($path)) { 
+               // $var[C('VAR_GROUP')]  = array_pop($path); 去掉Think分组 使用ikphp独有模式
+                $var[C('VAR_APPNAME')]	= array_pop($path); 
             }
         }
+        
         return $var;
     }
 
@@ -154,7 +161,7 @@ class CheckRouteBehavior extends Behavior {
             exit;
         }else{
             // 解析路由地址
-            $var  =  $this->parseUrl($url);
+            $var  =  $this->parseUrl($url); 
             // 解析路由地址里面的动态参数
             $values  =  array_values($matches);
             foreach ($var as $key=>$val){
@@ -187,25 +194,27 @@ class CheckRouteBehavior extends Behavior {
     // '/new\/(\d+)/'=>array('/new.php?id=:1&page=:2&status=1','301'), 重定向
     private function parseRegex($matches,$route,$regx) {
         // 获取路由地址规则
-        $url   =  is_array($route)?$route[0]:$route;
-        $url   =  preg_replace('/:(\d+)/e','$matches[\\1]',$url);
+        $url   =  is_array($route)?$route[0]:$route;     	
+        $url   =  preg_replace('/:(\d+)/e','$matches[\\1]',$url); 
         if(0=== strpos($url,'/') || 0===strpos($url,'http')) { // 路由重定向跳转
             header("Location: $url", true,(is_array($route) && isset($route[1]))?$route[1]:301);
             exit;
         }else{
+        	  
             // 解析路由地址
-            $var  =  $this->parseUrl($url);
+            $var  =  $this->parseUrl($url);   
+            $regx =  substr_replace($regx,'',0,strlen($matches[0])); 
             // 解析剩余的URL参数
-            $regx =  substr_replace($regx,'',0,strlen($matches[0]));
             if($regx) {
                 preg_replace('@(\w+)\/([^,\/]+)@e', '$var[strtolower(\'\\1\')]=strip_tags(\'\\2\');', $regx);
             }
             // 解析路由自动传人参数
-            if(is_array($route) && isset($route[1])) {
+            if(is_array($route) && isset($route[1])) { 
                 parse_str($route[1],$params);
                 $var   =   array_merge($var,$params);
             }
-            $_GET   =  array_merge($var,$_GET);
+           
+            $_GET   =  array_merge($var,$_GET);  
         }
         return true;
     }

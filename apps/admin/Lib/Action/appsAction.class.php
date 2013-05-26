@@ -64,7 +64,7 @@ class appsAction extends backendAction {
 		foreach($appList as &$v){
 			$v['host_type_alias'] = $this->host_type_alias[$v['host_type']];
 			!empty($v['author_url']) && $v['author_name'] = "<a href='{$v['author_url']}'>{$v['author_name']}</a>";  
-			$v['icon_url'] = empty($v['icon_url']) ? '<img src="'.APPS_URL.'/'.$v['app_name'].'/Appinfo/icon_app.png" >' : "<img src='{$v['icon_url']}'>";
+			$v['icon_url'] = !empty($v['icon_url']) ? '<img src="'.C('ik_site_url').APPS_URL.'/'.$v['app_name'].'/Appinfo/icon_app.png" >' : "";
 			$v['doaction'] =  "<a href='".U('admin/apps/preinstall',array('app_name'=>$v['app_name'],'install'=>1))."'>安装</a>";				
 		}
 		$this->assign('list',$appList);
@@ -77,6 +77,7 @@ class appsAction extends backendAction {
 		$appList = $this->app_mod->order('setuptime desc')->select();
 		foreach ($appList as $key=>$item){
 			$list[] = $item;
+			$list[$key]['icon_url'] = !empty($item['icon_url']) ? C('ik_site_url').$item['icon_url']:"";
 			$list[$key]['is_nav'] = $item['is_nav'] == 0 ? '否' : '是' ;
 		}
 		$this->assign('list', $list);

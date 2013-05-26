@@ -78,7 +78,7 @@ __EXTENDS_JS__
 
 </header>
 <!--header-->
-<div id="header">
+<?php if($app_name == 'public' && empty($visitor) && $module_name != 'index'): ?><div id="header">
     
 	<div class="site_nav">
         <div class="<?php echo ($logo[style]); ?>">
@@ -99,7 +99,7 @@ __EXTENDS_JS__
         <div class="cl"></div>
 	</div>
         
-</div>
+</div><?php endif; ?>
 <div class="midder">
     <?php if(empty($visitor[userid])): ?><div class="anony-nav">
             <div class="bd">
@@ -200,7 +200,7 @@ __EXTENDS_JS__
             
             <h2>最新创建小组&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·<span class="pl">&nbsp;(<a href="<?php echo U('group/index/explore');?>">全部</a>) </span></h2>
             <div class="line23">
-            <?php if(is_array($arrNewGroup)): foreach($arrNewGroup as $key=>$item): ?><a href="<?php echo U('group/show',array('id'=>$item[groupid]));?>"><?php echo ($item[groupname]); ?></a> (<?php echo ($item[count_user]); if($item[uptime] > strtotime(date('Y-m-d 00:00:00'))): ?>/<font color="orange"><?php echo ($item[count_topic_today]); ?></font><?php endif; ?>)<br><?php endforeach; endif; ?>
+            <?php if(is_array($arrNewGroup)): foreach($arrNewGroup as $key=>$item): ?><a href="<?php echo U('group/index/show',array('id'=>$item[groupid]));?>"><?php echo ($item[groupname]); ?></a> (<?php echo ($item[count_user]); if($item[uptime] > strtotime(date('Y-m-d 00:00:00'))): ?>/<font color="orange"><?php echo ($item[count_topic_today]); ?></font><?php endif; ?>)<br><?php endforeach; endif; ?>
             </div>
 
 			<h2>最新文章&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·<span class="pl">&nbsp;(<a href="<?php echo U('article/index/index');?>">全部</a>) </span></h2>

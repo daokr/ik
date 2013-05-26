@@ -22,14 +22,15 @@
             <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('admin/setting/url');?>" target="MainIframe">链接形式</a></li>
          </ul>
     </li> 
-
+<!--
     <li class="treemenu_on">
         <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">前台界面</a>
         <ul class="submenu" style="display: block;">
             <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('admin/nav/index');?>" target="MainIframe">导航设置</a></li>
             <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('admin/setting/theme');?>" target="MainIframe">前台风格</a></li>        
          </ul>
-    </li><?php endif; ?>
+    </li>
+    --><?php endif; ?>
 <?php if($ik == 'user'): ?><li class="treemenu_on">
         <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">用户管理</a>
         <ul class="submenu" style="display: block;">
@@ -44,5 +45,3 @@
         	<li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('admin/apps/installed');?>" target="MainIframe">已安装的应用</a></li>
         </ul>
     </li><?php endif; ?>
-<!--引入其他应用的模版文件：格式 IKAPP:应用名:模型名:操作 如：IKAPP:group:admin:left_menu-->
-<?php if(is_array($admin_top_nav)): foreach($admin_top_nav as $key=>$item): endforeach; endif; ?>
